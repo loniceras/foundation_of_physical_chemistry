@@ -1,0 +1,206 @@
+\chapter[经典物理概要]{经典物理概要}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[经典力学]{经典力学}\label{经典力学}
+经典力学通过\textbf{参考系}来描述自然界中的事件, 参考系通常包括一个坐标系和固定在坐标系中的钟, 其中坐标系可以刻画物体的位置, 钟可以指示时间. \textbf{惯性系}是一种能均匀且各向同性地描述空间, 并能均匀地描述时间的参考系. 一个不受外力的运动物体在惯性系中保持恒定速度, 一个相对某惯性系作匀速直线运动的惯性系也是惯性系. 经典力学遵从\textbf{相对性原理}, 即所有自然定律在所有惯性系中具有相同的形式. 经典非相对论性力学(牛顿力学)使用相互独立的绝对空间和绝对时间来描述事件, 且惯性系中物理相互作用的传播速度是无穷大的. 经典相对论性力学使用互相关联的空间和时间来描述事件, 且满足\textbf{光速不变原理}, 即惯性系中物理相互作用的最大可能的传播速度是光在真空中的速度$ c $. 对于运动速度远小于光速的物体, 经典非相对论性力学仍然是有效的.
+
+当给定物体的尺寸和形状对运动问题的影响不大时, 可将该物体视作没有尺寸和形状的几何点处理来简化问题, 此即为经典力学中广泛应用的\textbf{质点模型}. 质点在参考坐标系中的位置可用\textbf{径矢}$ \vb*{r} $表示, 质点所处的时间可用$ t $表示. 由多个质点通过某种方式构成的集合称为\textbf{质点系}. 经验表明, 给定质点系中所有质点的位置和速度就可以确定质点系当前的状态, 并且原则上可预测质点系今后的运动. 事实上, 当质点系在运动过程中受到一定\textbf{约束条件}的限制时, 并不需要确定所有质点的位置和速度即可确定质点系当前状态和预测今后运动. 考虑一个具有$ n $个质点的质点系, 对其的约束条件可记作
+\begin{equation*}
+    f(\vb*{r}_1,\vb*{r}_2,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t)=0
+\end{equation*}
+或
+\begin{equation*}
+    f(\vb*{r}_1,\vb*{r}_2,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t) \geq 0.
+\end{equation*}
+前者称为\textbf{双面约束条件}, 后者称为\textbf{单面约束条件}. 双面约束条件可以分为\textbf{完整约束}和\textbf{非完整约束}, 完整约束可减少一个独立坐标和一个独立速度分量, 非完整约束只能减少一个独立速度分量. 完整约束又可分为\textbf{几何约束}和\textbf{可积运动约束}, 几何约束$ f(\vb*{r}_1,\vb*{r}_2,\ldots,\vb*{r}_n,t)=0 $仅对质点系的几何位形加以限制, 可积运动约束同时对质点系的几何位形和运动情况加以限制, 但可以通过对其积分转化为几何约束. 所有约束条件都是完整约束的质点系称为\textbf{完整力学体系}, 否则称为\textbf{非完整力学体系}. 今后我们只考虑完整力学体系.
+
+给定具有$ n $个质点和$ k $个相互独立的完整约束的完整力学体系, 我们至少需要$ 3n-k $个参数才能确定某时刻该力学体系中各质点位置, 即确定力学体系的位形. 我们称能够确定位形的最少参数$ 3n-k $为该力学体系的\textbf{独立广义坐标数}, 称能够唯一确定位形的一组$ 3n-k $个参数为该力学体系的\textbf{广义坐标}$ q $. 应当注意, 力学体系的广义坐标仅代表一些互相独立的参数, 它们可以是距离或角度等常见物理量, 也可以根本没有几何意义, 完整力学体系的\textbf{自由度}即为独立广义坐标数. 广义坐标$ q $对时间$ t $的导数$ \dv*{q}{t} $称为\textbf{广义速度}, 记作$ \dot{q} $. 广义坐标$ q $对时间$ t $的二阶导数$ \dv*[2]{q}{t} $称为\textbf{广义加速度}, 记作$ \ddot{q} $. 如果一个独立广义坐标数为$ s $的力学体系的广义坐标为$ (q_1,q_2,\ldots,q_s) $, 则其广义速度为$ (\dot{q_1},\dot{q_2},\ldots,\dot{q_s}) $, 广义加速度为$ (\ddot{q_1},\ddot{q_2},\ldots,\ddot{q_s}) $, 它们可形式上分别记作列向量$ \vb*{q},\dot{\vb*{q}},\ddot{\vb*{q}} $. 仿照质点的径矢的概念, 我们也可以对力学体系定义\textbf{广义位矢}$ (\vb*{r}_1(\vb*{q},t),\vb*{r}_2(\vb*{q},t),\ldots,\vb*{r}_n(\vb*{q},t)) $.
+
+\begin{postulate}[最小作用量原理]\label{pos:最小作用量原理}
+    每个力学体系可以由一个确定的函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $表征, 其中$ \vb*{q} $是广义坐标, $ \dot{\vb*{q}} $是广义速度, $ t $是时间. 假设力学体系在$ t=t_{\init} $时广义坐标$ \vb*{q}_{\init} $和$ t=t_{\fini} $时的广义坐标$ \vb*{q}_{\fini} $是给定的, 则该体系由运动方程确定的真实运动轨迹$ \vb*{q}(t) $一定使得
+    \begin{equation}
+        \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})=\int_{t_{\init}}^{t_{\fini}} \lagr(\vb*{q},\dot{\vb*{q}},t) \dd{t}
+    \end{equation}
+    取极值(通常是极小值, 但也可能是鞍点或极大值).
+\end{postulate}
+其中, $ \lagr(\vb*{q},\dot{\vb*{q}},t) $称为体系的\textbf{拉格朗日函数}, $ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $称为体系的\textbf{哈密顿作用量}.
+
+我们运用变分法来获得体系在拉格朗日力学下的运动方程. 考虑哈密顿作用量$ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $的等时变分
+\begin{align*}
+    \var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})} &=\int_{t_{\init}}^{t_{\fini}} \lagr(\vb*{q},\dot{\vb*{q}},t) \dd{t} = \int_{t_{\init}}^{t_{\fini}} \sum_{\beta=1}^s\bigg(\pdv{\lagr}{q_{\beta}}\var{q_{\beta}}+\pdv{\lagr}{\dot{q_{\beta}}}\var{\dot{q_{\beta}}}\bigg) \dd{t}\\
+    &=\int_{t_{\init}}^{t_{\fini}} \sum_{\beta=1}^s\bigg(\pdv{\lagr}{q_{\beta}}\var{q_{\beta}} + \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}} \var{q_{\beta}}) - \var{q_{\beta}} \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}})\bigg) \dd{t}\\
+    &=\eval{\sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}+\int_{t_{\init}}^{t_{\fini}} \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}})\bigg) \var{q_{\beta}} \dd{t}.
+\end{align*}
+注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{欧拉}--\textbf{拉格朗日方程}:
+\begin{equation}
+    \pdv{\lagr}{q_{\alpha}} - \dv{t}(\pdv{\lagr}{\dot{q_{\alpha}}}) = 0.
+\end{equation}
+力学体系的拉格朗日函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $具有\textbf{规范不定性}, 即在\textbf{定域规范变换}$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下有$ \var{\tilde{\action}(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})}=\var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})} $, 进而在定域规范变换下体系的欧拉{--}拉格朗日方程和运动规律也不变, 此即为体系的\textbf{规范不变性}.
+
+通过拉格朗日变量定义\textbf{广义动量}$ p=\pdv*{\lagr}{\dot{q}} $, 得\textbf{广义动量定理}: 对任意$ \alpha \in \{1,2,\ldots,s\} $有$ \dot{p_{\alpha}}=\pdv*{\lagr}{q_{\alpha}} $. 在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义动量为$ \tilde{p_{\alpha}}=p_{\alpha}+\pdv*{f}{q_{\alpha}} $, 因此广义动量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在空间内整体平移相同的位移, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} \vb*{e} $. 如果该体系的所有质点在空间内整体平移后的拉格朗日函数仍保持不变(即体系满足\textbf{空间平移不变性}或\textbf{空间均匀性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 考虑力学体系的所有质点在空间内整体旋转相同的角度, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} \times \vb*{r}_i $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} (\vb*{e} \times \vb*{r}_i) $. 如果该体系的所有质点在空间内整体旋转后的拉格朗日函数仍保持不变(即体系满足\textbf{空间转动不变性}或\textbf{空间各向同性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 现在我们考虑$ \lagr(\vb*{q},\dot{\vb*{q}},t) $对时间的导数
+\begin{align*}
+    \dv{\lagr}{t} &= \sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \pdv{\lagr}{\dot{q_{\beta}}} \ddot{q_{\beta}} \bigg) + \pdv{\lagr}{t} = \sum_{\beta=1}^s \pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} - \sum_{\beta=1}^s \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \dot{q_{\beta}} + \pdv{\lagr}{t} \\
+    &=\sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \bigg)\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} + \pdv{\lagr}{t} = \dv{t} \sum_{\beta=1}^s p_{\beta} \dot{q_{\beta}} + \pdv{\lagr}{t}.
+\end{align*}
+通过拉格朗日变量定义\textbf{广义能量}$ E=\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \lagr(\vb*{q},\dot{\vb*{q}},t) $, 得\textbf{广义能量定理}: $ \dot{E}=-\pdv*{\lagr}{t} $. 在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义能量为$ \tilde{E}=E-\pdv*{f}{t} $, 因此广义能量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在时间内整体平移, 如果该体系时间在平移后的拉格朗日函数仍保持不变(即体系满足\textbf{时间平移不变性}或\textbf{时间均匀性}), 即$ \pdv*{\lagr}{t}=0 $, 则$ \dot{E}=0 $.
+
+类似地, 我们运用变分法来获得体系在哈密顿力学下的运动方程. 定义\textbf{哈密顿函数}$ \hami(\vb*{q},\vb*{p},t) $满足
+\begin{equation}
+    \hami(\vb*{q},\vb*{p},t) + \lagr(\vb*{q},\dot{\vb*{q}},t) = \sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} = \vb*{p} \cdot \dot{\vb*{q}}.
+\end{equation}
+由于广义动量具有规范不定性, 其值取决于拉格朗日函数的规范选择, 因此我们可将广义动量视作与广义坐标地位平等的独立变量. 考虑哈密顿作用量$ \action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini}) $的等时变分
+\begin{align*}
+    \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})} &=\int_{t_{\init}}^{t_{\fini}} \lagr(\vb*{q},\dot{\vb*{q}},t) \dd{t} = \int_{t_{\init}}^{t_{\fini}} \sum_{\beta=1}^s\bigg(p_{\beta} \var{\dot{q_{\beta}}} + \dot{q_{\beta}} \var{p_{\beta}} - \pdv{\hami}{q_{\beta}}\var{q_{\beta}} - \pdv{\hami}{p_{\beta}}\var{p_{\beta}}\bigg) \dd{t}\\
+    &=\int_{t_{\init}}^{t_{\fini}} \bigg(\dv{t} \sum_{\beta=1}^s p_{\beta} \var{q_{\beta}} +\sum_{\beta=1}^s \bigg(\dot{q_{\beta}} \var{p_{\beta}} - \dot{p_{\beta}} \var{q_{\beta}} - \pdv{\hami}{q_{\beta}}\var{q_{\beta}} - \pdv{\hami}{p_{\beta}}\var{p_{\beta}} \bigg)\bigg) \dd{t}\\
+    &=\eval{\sum_{\beta=1}^s p_{\beta} \var{q_{\beta}}}_{t_{\init}}^{t_{\fini}} + \int_{t_{\init}}^{t_{\fini}} \bigg(\sum_{\beta=1}^s \bigg(\dot{q_{\beta}} - \pdv{\hami}{p_{\beta}} \bigg)\var{p_{\beta}} - \sum_{\beta=1}^s \bigg(\dot{p_{\beta}} + \pdv{\hami}{q_{\beta}} \bigg)\var{q_{\beta}} \bigg) \dd{t}.
+\end{align*}
+注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s p_{\beta} \var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $和$ \var{p_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{哈密顿方程}:
+\begin{equation}
+    \pdv{\hami}{p_{\alpha}} = \dot{q_{\alpha}}, \quad \pdv{\hami}{q_{\alpha}} = -\dot{p_{\alpha}}.
+\end{equation}
+拉格朗日函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $的规范不定性也可以推广至在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},\vb*{p},t)}{t} $下有$ \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})}=\var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})} $. 对拉格朗日函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $进行勒让德变换, 也可以获得哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $和哈密顿方程, 即由
+\begin{equation*}
+    \dd{\hami} = \sum_{\beta=1}^s (p_{\beta} \dd{\dot{q_{\beta}}} + \dot{q_{\beta}} \dd{p_{\beta}}) - \sum_{\beta=1}^s \bigg(\dot{p_{\beta}} \dd{q_{\beta}} + p_{\beta} \dd{\dot{q_{\beta}}} + \pdv{\lagr}{t}\dd{t}\bigg) = \sum_{\beta=1}^s \bigg(\dot{q_{\beta}} \dd{p_{\beta}} - \dot{p_{\beta}} \dd{q_{\beta}} - \pdv{\lagr}{t}\dd{t}\bigg)
+\end{equation*}
+知对任意$ \alpha \in \{1,2,\ldots,s\} $有$ \pdv*{\hami}{p_{\alpha}} = \dot{q_{\alpha}} $和$ \pdv*{\hami}{q_{\alpha}} = -\dot{p_{\alpha}} $. 由$ \pdv*{\hami}{q_{\alpha}} = -\pdv*{\lagr}{q_{\alpha}} $可知, 体系的拉格朗日函数不显含某个广义坐标当且仅当其哈密顿函数也不显含该广义坐标. 此外, 易发现$ \pdv*{\hami}{t} = -\pdv*{\lagr}{t} $, 因而体系的拉格朗日函数不显含时间当且仅当体系的哈密顿函数不显含时间. 考虑$ \hami(\vb*{q},\vb*{p},t) $对时间的导数, 有
+\begin{equation*}
+    \dv{\hami}{t} = \sum_{\beta =1}^s \bigg(\pdv{\hami}{q_{\beta}}\dot{q_{\beta}} + \pdv{\hami}{p_{\beta}}\dot{p_{\beta}}\bigg) + \pdv{\hami}{t} = \pdv{\hami}{t}.
+\end{equation*}
+易发现哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $即为采用哈密顿变量表示的广义能量. 如果体系的哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $不显含时间, 则该体系在运动过程中恒有广义能量$ \hami(\vb*{q},\vb*{p},t) $为定值$ E $, 并称该类体系是\textbf{广义保守的}.
+
+对拉格朗日函数$ \lagr(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\dot{\vb*{q}},t)=\lagr(\zeta_1,\zeta_2,\ldots,\zeta_r,q_{r+1},q_{r+2},\ldots,q_s,\dot{\zeta_1},\dot{\zeta_2},\ldots,\dot{\zeta_r},\dot{q_{r+1}},\dot{q_{r+2}},\ldots,\dot{q_s},t) $进行勒让德变换时, 我们可以仅将部分拉格朗日变量$ \vb*{q},\dot{\vb*{q}} $转化为哈密顿变量$ \vb*{q},\vb*{p} $, 最终得到具有组合变量的罗斯函数$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t)=\routh(\zeta_1,\zeta_2,\ldots,\zeta_r,q_{r+1},q_{r+2},\ldots,q_s,\dot{\zeta_1},\dot{\zeta_2},\ldots,\dot{\zeta_r},p_{r+1},p_{r+2},\ldots,p_s,t) $和罗斯方程. 定义\textbf{罗斯函数}满足
+\begin{equation}
+    \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) + \lagr(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\dot{\vb*{q}},t) = \sum_{\beta=r+1}^s p_{\beta}\dot{q_{\beta}} = \vb*{p} \cdot \dot{\vb*{q}},
+\end{equation}
+现对$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) $作全微分, 得
+\begin{align*}
+    \dd{\routh} &= \sum_{\beta=r+1}^s (p_{\beta} \dd{\dot{q_{\beta}}} + \dot{q_{\beta}} \dd{p_{\beta}}) - \sum_{\beta=1}^r \bigg(\pdv{\lagr}{\xi_{\beta}}\dd{\xi_{\beta}} + \pdv{\lagr}{\dot{\xi_{\beta}}}\dd{\dot{\xi_{\beta}}}\bigg) - \sum_{\beta=r+1}^s \bigg(\pdv{\lagr}{q_{\beta}}\dd{q_{\beta}} + \pdv{\lagr}{\dot{q_{\beta}}}\dd{\dot{q_{\beta}}}\bigg) - \pdv{\lagr}{t}\dd{t} \\
+    &= \sum_{\beta=1}^r \bigg(- \pdv{\lagr}{\xi_{\beta}}\dd{\xi_{\beta}} - \pdv{\lagr}{\dot{\xi_{\beta}}}\dd{\dot{\xi_{\beta}}}\bigg) + \sum_{\beta=r+1}^s (\dot{q_{\beta}}\dd{p_{\beta}} - \dot{p_{\beta}}\dd{q_{\beta}}) - \pdv{\lagr}{t}\dd{t}.
+\end{align*}
+因此, 对任意$ \alpha \in \{1,2,\ldots,r\} $有\textbf{罗斯方程}:
+\begin{equation}
+    \pdv{\routh}{\xi_{\alpha}} = -\pdv{\lagr}{\xi_{\alpha}}, \quad \pdv{\routh}{\dot{\xi_{\alpha}}} = -\pdv{\lagr}{\dot{\xi_{\alpha}}}, \quad\pdv{\routh}{\xi_{\alpha}} - \dv{t}(\pdv{\routh}{\dot{\xi_{\alpha}}}) = 0;
+\end{equation}
+对任意$ \alpha \in \{r+1,r+2,\ldots,s\} $有\textbf{罗斯方程}:
+\begin{equation}
+    \pdv{\routh}{p_{\alpha}} = \dot{q_{\alpha}}, \quad \pdv{\routh}{q_{\alpha}} = -\dot{p_{\alpha}}.
+\end{equation}
+由$ \pdv*{\routh}{\xi_{\alpha}} = -\pdv*{\lagr}{\xi_{\alpha}} $和$ \pdv*{\routh}{q_{\alpha}} = -\pdv*{\lagr}{q_{\alpha}} $可知, 体系的拉格朗日函数不显含某个广义坐标当且仅当其罗斯函数也不显含该广义坐标. 此外, 易发现$ \pdv*{\routh}{t} = -\pdv*{\lagr}{t} $, 因而体系的拉格朗日函数不显含时间当且仅当体系的罗斯函数不显含时间. 考虑$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) $对时间的导数, 有
+\begin{align*}
+    \dv{\routh}{t} &= \dv{t} \sum_{\beta=r+1}^s p_{\beta}\dot{q_{\beta}} - \bigg(\dv{t} \sum_{\beta=1}^r \pdv{\lagr}{\xi_{\beta}} \dot{\xi_{\beta}} + \dv{t} \sum_{\beta=r+1}^s p_{\beta} \dot{q_{\beta}} + \pdv{\lagr}{t}\bigg) \\
+    &= -\dv{t} \sum_{\beta=1}^r \pdv{\lagr}{\dot{\xi_{\beta}}} \dot{\xi_{\beta}} - \pdv{\lagr}{t} = \dv{t} \sum_{\beta=1}^r \pdv{\routh}{\dot{\xi_{\beta}}} \dot{\xi_{\beta}} + \pdv{\routh}{t},
+\end{align*}
+得$ \dv{t} \big(\routh - \sum_{\beta=1}^r \pdv{\routh}{\dot{\xi_{\beta}}}\dot{\xi_{\beta}}\big) = \pdv*{\routh}{t} $. 易发现$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) - \sum_{\beta=1}^r \pdv{\routh}{\dot{\xi_{\beta}}}\dot{\xi_{\beta}} $即为采用罗斯变量表示的广义能量. 如果体系的罗斯函数$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) $不显含时间, 则该体系在运动过程中恒有广义能量$ \routh(\vb*{\zeta},\vb*{q},\dot{\vb*{\zeta}},\vb*{p},t) - \sum_{\beta=1}^r \pdv{\routh}{\dot{\xi_{\beta}}}\dot{\xi_{\beta}} $为定值$ E $.
+
+我们现在考虑拉格朗日函数和哈密顿函数的独立变量变换问题. 考虑对拉格朗日函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $的广义坐标$ \vb*{q} $作\textbf{点变换}满足$ \vb*{q}=\vb*{q}(\vb*{Q},t) $, 此时自然有$ \lagr_{\vb*{Q}}(\vb*{Q},\dot{\vb*{Q}},t)=\lagr(\vb*{q}(\vb*{Q},t),\dot{\vb*{q}}(\vb*{Q},\dot{\vb*{Q}},t),t) $. 可以发现欧拉{--}拉格朗日方程在点变换下保持不变, 即对任意$ \alpha \in \{1,2,\ldots,s\} $有
+\begin{align*}
+    \pdv{\lagr_{\vb*{Q}}}{Q_{\alpha}} - \dv{t}(\pdv{\lagr_{\vb*{Q}}}{\dot{Q_{\alpha}}}) &= \sum_{\beta=1}^s \pdv{\lagr}{q_{\beta}}\pdv{q_{\beta}}{Q_{\alpha}} + \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\pdv{\dot{q_{\beta}}}{Q_{\alpha}} - \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\pdv{\dot{q_{\beta}}}{\dot{Q_{\alpha}}}\\
+    &=\sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}}\pdv{q_{\beta}}{Q_{\alpha}} - \pdv{\dot{q_{\beta}}}{\dot{Q_{\alpha}}}\dv{t}\pdv{\lagr}{\dot{q_{\beta}}} \bigg) + \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \bigg(\pdv{\dot{q_{\beta}}}{Q_{\alpha}} - \dv{t} \pdv{\dot{q_{\beta}}}{\dot{Q_{\alpha}}} \bigg)\\
+    &=\sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}\pdv{\lagr}{\dot{q_{\beta}}} \bigg) \pdv{q_{\beta}}{Q_{\alpha}} + \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \bigg(\pdv{\dot{q_{\beta}}}{Q_{\alpha}} - \dv{t} \pdv{q_{\beta}}{Q_{\alpha}} \bigg)=0.
+\end{align*}
+因此, 哈密顿方程在点变换下也保持不变, 即对任意$ \alpha \in \{1,2,\ldots,s\} $都有$ \pdv*{\hami_{\vb*{Q}}}{P_{\alpha}} = \dot{Q_{\alpha}} $和$ \pdv*{\hami_{\vb*{Q}}}{Q_{\alpha}} = -\dot{P_{\alpha}} $, 其中$ P_{\alpha}=\pdv*{\lagr_{\vb*{Q}}}{\dot{Q_{\alpha}}} $. 罗斯方程在点变换下也有类似的结论. 由于哈密顿函数的广义坐标和广义动量都是独立的变量, 我们实际上可以考虑更广泛的变换. 对哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $的广义坐标$ \vb*{q} $和广义动量$ \vb*{p} $作变换满足$ \vb*{q}=\vb*{q}(\vb*{Q},\vb*{P},t) $和$ \vb*{p}=\vb*{p}(\vb*{Q},\vb*{P},t) $, 此时自然有$ \hami_{\vb*{QP}}(\vb*{Q},\vb*{P},t)=\hami(\vb*{q}(\vb*{Q},\vb*{P},t),\vb*{p}(\vb*{Q},\vb*{P},t),t) $. 如果哈密顿方程能在该变换下保持不变, 即对任意$ \alpha \in \{1,2,\ldots,s\} $都有$ \pdv*{\hami_{\vb*{QP}}}{P_{\alpha}} = \dot{Q_{\alpha}} $和$ \pdv*{\hami_{\vb*{QP}}}{Q_{\alpha}} = -\dot{P_{\alpha}} $, 则称该变换为\textbf{正则变换}. 通过正则变换产生的独立变量$ \vb*{Q},\vb*{P} $显然应当满足最小作用量原理, 应当考虑
+\begin{align*}
+    \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})} &= \var{\int_{t_{\init}}^{t_{\fini}} \bigg(\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \hami(\vb*{q},\vb*{p},t) + \dv{t} f_1(\vb*{q},\vb*{p},t)\bigg) \dd{t}} = 0,\\
+    \var{\action(\vb*{Q}_{\init},\vb*{P}_{\init},t_{\init};\vb*{Q}_{\fini},\vb*{P}_{\fini},t_{\fini})} &= \var{\int_{t_{\init}}^{t_{\fini}} \bigg(\sum_{\beta=1}^s P_{\beta}\dot{Q_{\beta}} - \hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) + \dv{t} f_2(\vb*{Q},\vb*{P},t)\bigg) \dd{t}} = 0,
+\end{align*}
+以上两式相减时引入标度因子$ \lambda $, 定义第一类母函数$ F_1=F_1(\vb*{q},\vb*{Q},t)=f_2(\vb*{Q},\vb*{P},t)-\lambda f_1(\vb*{q},\vb*{p},t) $, 得
+\begin{equation*}
+    \var{\int_{t_{\init}}^{t_{\fini}} \bigg(\lambda \bigg(\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \hami(\vb*{q},\vb*{p},t)\bigg) - \bigg(\sum_{\beta=1}^s P_{\beta}\dot{Q_{\beta}} - \hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t)\bigg) - \dv{F_1}{t} \bigg) \dd{t}}=0.
+\end{equation*}
+要使上式成立, 只要
+\begin{equation*}
+    \lambda \bigg(\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \hami(\vb*{q},\vb*{p},t)\bigg) = \sum_{\beta=1}^s P_{\beta}\dot{Q_{\beta}} + \hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) + \dot{F_1} = 0,
+\end{equation*}
+此时有
+\begin{equation*}
+    \dd{F_1}(\vb*{q},\vb*{Q},t) = \lambda \sum_{\beta=1}^s p_{\beta} \dd{q_{\beta}} - \sum_{\beta=1}^s P_{\beta} \dd{Q_{\beta}} + \big(\hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) - \lambda \hami(\vb*{q},\vb*{p},t)\big) \dd{t}.
+\end{equation*}
+对$ F_1(\vb*{q},\vb*{Q},t) $作勒让德变换可获得另外三类母函数. 定义第二类母函数$ F_2=F_2(\vb*{q},\vb*{P},t)=F_1+\sum_{\beta=1}^s P_{\beta}Q_{\beta} $, 第三类母函数$ F_3=F_3(\vb*{p},\vb*{Q},t)=F_1-\lambda\sum_{\beta=1}^s p_{\beta}q_{\beta} $, 第四类母函数$ F_4=F_4(\vb*{p},\vb*{P},t)=F_2-\lambda\sum_{\beta=1}^s p_{\beta}q_{\beta} $, 此时有
+\begin{align*}
+    \dd{F_2}(\vb*{q},\vb*{P},t) &= \lambda \sum_{\beta=1}^s p_{\beta} \dd{q_{\beta}} + \sum_{\beta=1}^s Q_{\beta} \dd{P_{\beta}} + \big(\hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) - \lambda \hami(\vb*{q},\vb*{p},t)\big) \dd{t},\\
+    \dd{F_3}(\vb*{p},\vb*{Q},t) &= -\lambda \sum_{\beta=1}^s q_{\beta} \dd{p_{\beta}} - \sum_{\beta=1}^s P_{\beta} \dd{Q_{\beta}} + \big(\hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) - \lambda \hami(\vb*{q},\vb*{p},t)\big) \dd{t},\\
+    \dd{F_4}(\vb*{p},\vb*{P},t) &= - \lambda \sum_{\beta=1}^s q_{\beta} \dd{p_{\beta}} + \sum_{\beta=1}^s Q_{\beta} \dd{P_{\beta}} + \big(\hami_{\vb*{Q}\vb*{P}}(\vb*{Q},\vb*{P},t) - \lambda \hami(\vb*{q},\vb*{p},t)\big) \dd{t}.
+\end{align*}
+当$ \lambda=1 $时即为正则变换, $ \lambda \neq 1 $时称为\textbf{拓展正则变换}. 我们将含标度因子的正则变换母函数的性质列在表 \ref{含标度因子的正则变换母函数的性质} 中. 如果母函数$ F_i $不显含时间, 则$ \hami_{\vb*{Q}\vb*{P}}=\lambda\hami $. 一些常见的正则变换: 恒等变换$ F_2(\vb*{q},\vb*{P},t)=\sum_{\beta=1}^s q_{\beta}P_{\beta} $或$ F_3(\vb*{p},\vb*{Q},t)=-\sum_{\beta=1}^s p_{\beta}Q_{\beta} $; 对偶变换$ F_1(\vb*{q},\vb*{Q},t)=\pm\sum_{\beta=1}^s q_{\beta}Q_{\beta} $或$ F_4(\vb*{p},\vb*{P},t)=\pm\sum_{\beta=1}^s p_{\beta}P_{\beta} $; 平移变换$ F_2(\vb*{q},\vb*{P},t)=\sum_{\beta=1}^s (q_{\beta}P_{\beta}+a_{\beta}P_{\beta}-b_{\beta}q_{\beta}) $或$ F_3(\vb*{p},\vb*{Q},t)=\sum_{\beta=1}^s (-p_{\beta}Q_{\beta}+a_{\beta}p_{\beta}-b_{\beta}Q_{\beta}) $; 点变换$ F_2(\vb*{q},\vb*{P},t)=\sum_{\beta=1}^s Q_{\beta}(\vb*{q},t) P_{\beta} $.
+\begin{longtable}[c]{cccc}
+    \caption{含标度因子的正则变换母函数的性质 \label{含标度因子的正则变换母函数的性质}}\\
+    \toprule $ F_1=F_1(\vb*{q},\vb*{Q},t) $ & $ F_2=F_2(\vb*{q},\vb*{P},t) $ & $ F_3=F_3(\vb*{p},\vb*{Q},t) $ & $ F_4=F_4(\vb*{p},\vb*{P},t) $ \\
+    \midrule\endfirsthead\multicolumn{4}{r}{\small 表 \ref{含标度因子的正则变换母函数的性质} (续)} \\
+    \toprule $ F_1=F_1(\vb*{q},\vb*{Q},t) $ & $ F_2=F_2(\vb*{q},\vb*{P},t) $ & $ F_3=F_3(\vb*{p},\vb*{Q},t) $ & $ F_4=F_4(\vb*{p},\vb*{P},t) $ \\ \\
+    \midrule\endhead \bottomrule \endfoot \bottomrule \endlastfoot
+    $ p_{\alpha}=\lambda\pdv*{F_1}{q_{\alpha}} $ & $ p_{\alpha}=\lambda\pdv*{F_2}{q_{\alpha}} $ & $ q_{\alpha}=-\lambda\pdv*{F_3}{p_{\alpha}} $ & $ q_{\alpha}=-\lambda\pdv*{F_4}{p_{\alpha}} $ \\
+    $ P_{\alpha}=-\pdv*{F_1}{Q_{\alpha}} $ & $ Q_{\alpha}=\pdv*{F_2}{P_{\alpha}} $ & $ P_{\alpha}=-\pdv*{F_3}{Q_{\alpha}} $ & $ Q_{\alpha}=\pdv*{F_4}{P_{\alpha}} $ \\
+    $ \hami_{\vb*{Q}\vb*{P}}=\lambda\hami+\pdv*{F_1}{t} $ & $ \hami_{\vb*{Q}\vb*{P}}=\lambda\hami+\pdv*{F_2}{t} $ & $ \hami_{\vb*{Q}\vb*{P}}=\lambda\hami+\pdv*{F_3}{t} $ & $ \hami_{\vb*{Q}\vb*{P}}=\lambda\hami+\pdv*{F_4}{t} $
+\end{longtable}
+
+\begin{proposition}[辛标记]\label{pro:辛标记}
+    我们引入辛标记表示正则变换. 先回顾向量的偏导数规则: 若$ \vb*{x}=\transpose{(x_1,x_2,\ldots,x_s)} $, $ \vb*{y}=\transpose{(y_1,y_2,\ldots,y_t)} $, 则$ \pdv*{y}{\vb*{x}}=\transpose{(\pdv*{y}{x_1},\pdv*{y}{x_2},\ldots,\pdv*{y}{x_s})} $, $ \pdv*{\vb*{y}}{x}=\transpose{(\pdv*{y_1}{x},\pdv*{y_2}{x},\ldots,\pdv*{y_s}{x})} $, $ \pdv*{\vb*{y}}{\vb*{x}} $为雅可比矩阵$ \pdv*{(y_1,y_2,\ldots,y_t)}{(x_1,x_2,\ldots,x_s)} $. 考虑哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $和$ \hami_{\vb*{QP}}(\vb*{Q},\vb*{P},t) $, 记列向量$ \vb*{\xi}=\transpose{(q_1,q_2,\ldots,q_s,p_1,p_2,\ldots,p_s)} $, 列向量$ \vb*{\varXi}=\transpose{(Q_1,Q_2,\ldots,Q_s,P_1,P_2,\ldots,P_s)} $, 将一对正则变换记作$ \vb*{\varXi}=\vb*{\varXi}(\vb*{\xi},t) $和$ \vb*{\xi}=\vb*{\xi}(\vb*{\varXi},t) $, 雅可比矩阵$ \pdv*{\vb*{\varXi}}{\vb*{\xi}} $记作$ \vb*{M} $, 雅可比矩阵$ \pdv*{\vb*{\xi}}{\vb*{\varXi}} $记作$ \vb*{W} $ (即$ \vb*{M}^{-1} $). 对第一类母函数$ F_1=F_1(\vb*{q},\vb*{Q},t) $作全微分, 由于$ \vb*{Q}=\vb*{Q}(\vb*{q},\vb*{p},t) $, 故考虑函数$ \tilde{F_1}=\tilde{F_1}(\vb*{q},\vb*{p},t)=F_1(\vb*{q},\vb*{Q}(\vb*{q},\vb*{p},t),t) $的全微分. 任取$ \alpha,\beta \in \{1,2,\ldots,s\} $, 求算$ \pdv{\tilde{F_1}}{\vb*{q}_{\alpha}},\pdv{\tilde{F_1}}{\vb*{q}_{\beta}},\pdv{\tilde{F_1}}{\vb*{p}_{\alpha}},\pdv{\tilde{F_1}}{\vb*{p}_{\beta}} $, 又由$ \pdv{\tilde{F_1}}{\vb*{q}_{\alpha}}{\vb*{q}_{\beta}}=\pdv{\tilde{F_1}}{\vb*{q}_{\beta}}{\vb*{q}_{\alpha}} $和$ \pdv{\tilde{F_1}}{\vb*{q}_{\alpha}}{\vb*{p}_{\beta}}=\pdv{\tilde{F_1}}{\vb*{p}_{\beta}}{\vb*{q}_{\alpha}} $和$ \pdv{\tilde{F_1}}{\vb*{p}_{\alpha}}{\vb*{p}_{\beta}}=\pdv{\tilde{F_1}}{\vb*{p}_{\beta}}{\vb*{p}_{\alpha}} $, 得方程
+    \begin{equation*}
+        \sum_{\gamma=1}^s \pdv{P_{\gamma}}{q_{\alpha}}\pdv{Q_{\gamma}}{q_{\beta}} = \sum_{\gamma=1}^s \pdv{P_{\gamma}}{q_{\beta}}\pdv{Q_{\gamma}}{q_{\alpha}}, \quad
+        \sum_{\gamma=1}^s \pdv{P_{\gamma}}{q_{\alpha}}\pdv{Q_{\gamma}}{p_{\beta}} = \sum_{\gamma=1}^s \pdv{P_{\gamma}}{p_{\beta}}\pdv{Q_{\gamma}}{q_{\alpha}} - \kron{\alpha}{\beta}, \quad
+        \sum_{\gamma=1}^s \pdv{P_{\gamma}}{p_{\alpha}}\pdv{Q_{\gamma}}{p_{\beta}} = \sum_{\gamma=1}^s \pdv{P_{\gamma}}{p_{\beta}}\pdv{Q_{\gamma}}{p_{\alpha}}.
+    \end{equation*}
+    将三个方程分别表示为矩阵方程后重新整合, 得到正则变换的辛条件
+    \begin{equation}
+        \transpose{\vb*{M}}\vb*{\varOmega}\vb*{M} = \mqty(\transpose{\big(\pdv{\vb*{Q}}{\vb*{q}}\big)} & \transpose{\big(\pdv{\vb*{P}}{\vb*{q}}\big)} \\ \transpose{\big(\pdv{\vb*{Q}}{\vb*{p}}\big)} & \transpose{\big(\pdv{\vb*{P}}{\vb*{p}}\big)}) \mqty(\vb*{0} & \vb*{I}_s\\ -\vb*{I}_s & \vb*{0}) \mqty(\pdv{\vb*{Q}}{\vb*{q}} & \pdv{\vb*{Q}}{\vb*{p}} \\ \pdv{\vb*{P}}{\vb*{q}} & \pdv{\vb*{P}}{\vb*{p}}) = \mqty(\vb*{0} & \vb*{I}_s\\ -\vb*{I}_s & \vb*{0}) = \vb*{\varOmega}.
+    \end{equation}
+    注意, $ \vb*{\varOmega} $是可逆的反对称矩阵, 有$ \vb*{\varOmega}^{-1}=\transpose{\vb*{\varOmega}}=-\vb*{\varOmega} $, $ \vb*{\varOmega}^2=-\vb*{I}_{2s} $. 雅可比矩阵$ \vb*{M} $称为辛矩阵, 所有正则变换的雅可比矩阵构成的集合在矩阵乘法下构成辛群$ \mathop{\mathrm{Sp}}(2s,\mathbb{R}) $. 如果正则变换$ f \colon \vb*{\xi} \mapsto \vb*{\varXi} $的辛矩阵为$ \vb*{M}_1 $, 正则变换$ g \colon \vb*{\varXi} \mapsto \vb*{\varXi}' $的辛矩阵为$ \vb*{M}_2 $, 则正则变换$ g \circ f \colon \vb*{\xi} \mapsto \vb*{\varXi}' $的辛矩阵为$ \vb*{M}_2 \vb*{M}_1 $. 另外, 由普法夫值$ \pfaff(\transpose{\vb*{M}}\vb*{\varOmega}\vb*{M})=\det(\vb*{M})\pfaff(\vb*{\varOmega})=\pfaff(\vb*{\varOmega}) = \pm 1 $, 得$ \det(\vb*{M})=1 $, 即辛矩阵的行列式值为1. 事实上, 辛标记也可用来表示哈密顿方程, 即$ \dot{\vb*{\xi}}=\vb*{\varOmega}(\pdv*{\hami}{\vb*{\xi}}) $. 更多辛标记的应用可以参考相关数学物理专著.
+\end{proposition}
+
+如果能够通过正则变换使新哈密顿函数恒等于0, 那么新哈密顿函数的变量都变为常数, 这为确定力学体系的运动方程提供了另一种手段. 考虑从哈密顿函数$ \hami(\vb*{q},\vb*{p},t) $到新哈密顿函数$ \hami_*(\vb*{Q},\vb*{P},t) $的正则变换母函数$ S $, 由于四类母函数都具有$ \hami_*(\vb*{Q},\vb*{P},t) = \hami(\vb*{q},\vb*{p},t) + \pdv*{S}{t} $的形式, 要使$ \hami_*(\vb*{Q},\vb*{P},t)=0 $, 则$ S $需满足$ \hami(\vb*{q},\vb*{p},t) + \pdv*{S}{t} = 0 $. 由于$ \vb*{Q} $和$ \vb*{P} $均为常数, 分别记作$ \vb*{C} $和$ \vb*{D} $. 考虑第二类母函数$ S=S(\vb*{q},\vb*{P},t) $, 由$ p_{\alpha}=\pdv*{S}{q_{\alpha}} $和$ Q_{\alpha}=\pdv*{S}{D_{\alpha}}=C_{\alpha} $, 得到\textbf{哈密顿}--\textbf{雅可比方程}
+\begin{equation}
+    \hami\bigg(\vb*{q},\pdv{S}{\vb*{q}},t\bigg) + \pdv{S(\vb*{q},\vb*{D},t)}{t} = 0.
+\end{equation}
+哈密顿{--}雅可比方程是函数$ S(\vb*{q},\vb*{D},t) $的一阶偏微分方程, 方程共有$ s+1 $个自变量(即$ \vb*{q} $和$ t $), 因此也会有$ s+1 $个独立的积分常数. 由于函数$ S $仅以其导数的形式出现在方程中, 故积分常数中会有$ 1 $个以相加方式出现的, 不妨考虑通积分$ S=S(\vb*{q},\vb*{D},t)+T $, 忽略$ T $不会对变换产生影响, 因而只需考虑剩下$ s $个自变量$ \vb*{D} $. 考察$ \dv*{S}{t} = \sum_{\beta=1}^s (\pdv*{S}{q_{\beta}})\dot{q_{\beta}} + \pdv*{S}{t} = \sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \hami(\vb*{q},\pdv*{S}{\vb*{q}},t) = \lagr $, 知$ S(\vb*{q},\vb*{D},t) = \int \lagr \dd{t} $为积分限不定的哈密顿作用量. 当哈密顿函数不显含时间时, 由体系广义能量为定值$ E $, 得$ \hami(\vb*{q},\pdv*{S}{\vb*{q}}) + \pdv*{S}{t} = E + \pdv*{S}{t} = 0 $, 哈密顿作用量可分离变量满足$ S=S(\vb*{q},\vb*{D},t)=W(\vb*{q},\vb*{D})+T(t)=W(\vb*{q},\vb*{D})-Et $, 得到不含时哈密顿{--}雅可比方程
+\begin{equation}
+    \hami\bigg(\vb*{q},\pdv{W}{\vb*{q}}\bigg) = E.
+\end{equation}
+考虑到$ \hami(\vb*{q},\pdv*{S}{\vb*{q}}) = E $, 有$ S = \int(\sum_{\beta=1}^s p_{\beta} \dot{q_\beta} - \hami)\dd{t} = \int\sum_{\beta=1}^s p_{\beta} \dd{q_{\beta}} -Et + S_0 $, 其中$ S_0 $为可略去的积分常数. 因此, $ W(\vb*{q},\vb*{D}) = \int \sum_{\beta=1}^s p_{\beta} \dd{q_{\beta}} $为积分限不定的拉格朗日作用量.
+
+\begin{proposition}[泊松括号]\label{pro:泊松括号}
+    令$ e=e(\vb*{q},t) $, $ f=f(\vb*{q},\vb*{p},t) $, $ g=g(\vb*{q},\vb*{p},t) $, $ h=h(\vb*{q},\vb*{p},t) $, $ \vb*{x}=\transpose{(q_1,q_2,\ldots,q_s,p_1,p_2,\ldots,p_s)} $, $ C_1,C_2 \in \mathbb{R} $. 我们称
+    \begin{equation*}
+        \pb{f}{g} = \sum_{\alpha=1}^s \bigg(\pdv{f}{q_{\alpha}}\pdv{g}{p_{\alpha}} - \pdv{g}{q_{\alpha}}\pdv{f}{p_{\alpha}}\bigg)=\sum_{\alpha=1}^s \mdet{\pdv{f}{q_{\alpha}} & \pdv{f}{p_{\alpha}} \\ \pdv{g}{q_{\alpha}} & \pdv{g}{p_{\alpha}}} = \sum_{\alpha=1}^s \det[\pdv{(f,g)}{(q_{\alpha},p_{\alpha})}] = \transpose{\bigg(\pdv{f}{\vb*{x}}\bigg)} \vb*{\varOmega} \pdv{g}{\vb*{x}}
+    \end{equation*}
+    为泊松括号, 称$ \pb{q_{\alpha}}{q_{\beta}}=\pb{p_{\alpha}}{p_{\beta}}=0 $和$ \pb{q_{\alpha}}{p_{\beta}}=\kron{\alpha}{\beta} $为基本泊松记号, 其中$ \kron{\alpha}{\beta} $为克罗内克记号.
+    \begin{enumerate}
+        \item 对任意$ \alpha \in \{1,2,\ldots,s\} $, 有$ \pdv*{\dot{e}}{\dot{q_{\alpha}}} = \pdv*{e}{q_{\alpha}} $和$ \dv{t}(\pdv*{e}{q_{\alpha}}) = \pdv*{\dot{e}}{q_{\alpha}} $.
+        \item 对任意$ \alpha \in \{1,2,\ldots,s\} $, 有$ \pb{q_{\alpha}}{f}=\pdv*{f}{p_{\alpha}} $和$ \pb{p_{\alpha}}{f}=-\pdv*{f}{q_{\alpha}} $.
+        \item $ \pb{f}{g}=-\pb{g}{f} $, $ \pb{f}{C_1g+C_2h}=C_1\pb{f}{g}+C_2\pb{f}{g} $, $ \pb{f}{gh}=\pb{f}{g}h+g\pb{f}{h} $.
+        \item 对任意$ x \in \{q_1,q_2,\ldots,q_s,p_1,p_2,\ldots,p_s,t\} $, 有$ \pdv*{\pb{f}{g}}{x} = \pb{\pdv*{f}{x}}{g} + \pb{f}{\pdv*{g}{x}} $.
+        \item 雅可比恒等式$ \pb{f}{\pb{g}{h}}+\pb{g}{\pb{h}{f}}+\pb{h}{\pb{f}{g}}=0 $.
+    \end{enumerate}
+\end{proposition}
+
+泊松括号在研究守恒量相关问题上有较大用处. 考虑函数$ f=f(\vb*{q},\vb*{p},t) $, 有$ \dv*{f}{t} = \pdv*{f}{t}+\sum_{\beta=1}^s \big(\pdv{f}{q_{\beta}}\dot{q_{\beta}}+\pdv{f}{p_{\beta}}\dot{p_{\beta}}\big) = \pdv*{f}{t}+\pb{f}{\hami(\vb*{q},\vb*{p},t)} $. 如果函数$ f $不显含时间, 则有$ \dv*{f}{t} = \pb{f}{\hami(\vb*{q},\vb*{p},t)} $. 当力学体系状态随时间演变时保持不变的力学量$ f $称为\textbf{运动积分}. 显然, 运动积分$ f $满足$ \dv*{f}{t}=\pb{f}{\hami(\vb*{q},\vb*{p},t)}=0 $. \textbf{泊松定理}告诉我们: 如果函数$ f,g $是运动积分, 则$ \pb{f}{g} $也是运动积分. 由于运动积分$ f,g $有$ \pdv*{f}{t}=-\pb{f}{\hami} $和$ \pdv*{g}{t}=-\pb{g}{\hami} $, 得$ \dv{t} \pb{f}{g} = \pdv{t} \pb{f}{g}+\pb{\pb{f}{g}}{\hami} = \pb{\pdv{f}{t}}{g}+\pb{f}{\pdv{g}{t}}+\pb{\pb{f}{g}}{\hami} = \pb{-\pb{f}{\hami}}{g}+\pb{f}{-\pb{g}{\hami}}+\pb{\pb{f}{g}}{\hami} = -\pb{f}{\pb{g}{\hami}}-\pb{g}{\pb{\hami}{f}}-\pb{\hami}{\pb{f}{g}} = 0 $, 因此$ \pb{f}{g} $也是运动积分. 泊松括号在正则变换下是保持不变的, 考虑函数$ f=f_{\xi}(\vb*{\xi},t)=f_{\varXi}(\vb*{\varXi},t) $和$ g=g_{\xi}(\vb*{\xi},t)=g_{\varXi}(\vb*{\varXi},t) $, 有
+\begin{equation*}
+    \pb{f}{g}_{\varXi} = \transpose{\bigg(\pdv{f}{\vb*{\varXi}}\bigg)} \vb*{\varOmega} \pdv{g}{\vb*{\varXi}} = \transpose{\bigg(\pdv{f}{\vb*{\xi}}\pdv{\vb*{\xi}}{\vb*{\varXi}}\bigg)} \vb*{\varOmega} \bigg(\pdv{g}{\vb*{\xi}}\pdv{\vb*{\xi}}{\vb*{\varXi}}\bigg) = \transpose{\bigg(\pdv{f}{\vb*{\xi}}\bigg)} \transpose{(\vb*{M}^{-1})} \vb*{\varOmega}\vb*{M}^{-1} \pdv{g}{\vb*{\xi}} = \transpose{\bigg(\pdv{f}{\vb*{\xi}}\bigg)} \vb*{\varOmega} \pdv{g}{\vb*{\xi}} = \pb{f}{g}_{\xi}.
+\end{equation*}
+相应地, 基本泊松括号在正则变化下也是保持不变的, 这可以作为正则变换的判据.
+
+我们可以考虑由力学体系的位形或状态张成的空间的性质. 由广义坐标$ \vb*{q} $张成的$ s $维空间$ C $称为\textbf{位形空间}. 力学体系的每个可能的位形都对应于$ C $中一个点, 体系的位形随时间的演化相当于在$ C $中画出一条连续的轨迹. 由广义坐标$ \vb*{q} $和广义速度$ \dot{\vb*{q}} $张成的$ 2s $维空间$ S $称为\textbf{状态空间}. 力学体系的每个可能的状态都对应于$ S $中一个点, 体系的状态随时间的演化相当于在$ S $中画出一条连续的轨迹. 由广义坐标$ \vb*{q} $和广义动量$ \vb*{p} $张成的$ 2s $维空间$ \varGamma $称为\textbf{相空间}. 力学体系的每个可能的状态都对应于$ \varGamma $中一个点(称为\textbf{相点}), 体系的状态随时间的演化相当于在$ \varGamma $中画出一条连续的轨迹(称为\textbf{相轨道}). 相体积在正则变换下是保持不变的, 考虑相体积元$ \prod_{\beta=1}^{2s} \dd{\xi_{\beta}}=\prod_{\beta=1}^{s} \dd{q_{\beta}}\dd{p_{\beta}} $和$ \prod_{\beta=1}^{2s} \dd{\varXi_{\beta}}=\prod_{\beta=1}^{s} \dd{Q_{\beta}}\dd{P_{\beta}} $, 有
+\begin{equation*}
+    \prod_{\beta=1}^{2s} \dd{\varXi_{\beta}} = \abs{\det\bigg(\pdv{\vb*{\varXi}}{\vb*{\xi}}\bigg)} \prod_{\beta=1}^{2s} \dd{\xi_{\beta}} = \abs{\det(\vb*{M})}\prod_{\beta=1}^{2s} \dd{\xi_{\beta}} = \prod_{\beta=1}^{2s} \dd{\xi_{\beta}}.
+\end{equation*}
+考虑正则变换为平移变换, 相空间的一个区域$ \varLambda $内所有相点经平移得到一个新的区域, 但区域$ \varLambda $的体积在平移变换前后保持不变(即为定值$ V $), 即\textbf{刘维尔定理}
+\begin{equation}
+    \int_{\varLambda} \dd{\varGamma} = V.
+\end{equation}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[经典电动力学]{经典电动力学}\label{经典电动力学}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[平衡态唯象热力学]{平衡态唯象热力学}\label{平衡态唯象热力学}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[平衡态经典统计力学]{平衡态经典统计力学}\label{平衡态经典统计力学}
