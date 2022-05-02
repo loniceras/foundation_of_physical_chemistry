@@ -8,7 +8,7 @@
 \usepackage{booktabs}%表格线
 \usepackage{picinpar}%图文绕排
 \makeatletter
-
+\newcommand*{\inum}{\mathrm{i}}                          %虚数
 \newcommand*{\init}{\mathrm{i}}                          %始态
 \newcommand*{\fini}{\mathrm{f}}                          %终态
 \newcommand*{\surr}{\mathrm{sur}}                        %环境
@@ -22,6 +22,7 @@
 \newcommand*{\avg}[1]{\langle#1\rangle}                  %系综平均
 
 \newcommand*{\kron}[2]{\delta_{#1#2}}                    %Kronecker记号
+\newcommand*{\levi}[3]{\epsilon_{#1#2#3}}                %Levi-Civita记号
 \newcommand*{\pfaff}{\mathop{\mathrm{pf}}}               %Pfaffian值
 \newcommand*{\transpose}[1]{{#1}^{\mathsf{T}}}           %转置
 
