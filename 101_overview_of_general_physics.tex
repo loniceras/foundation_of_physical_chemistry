@@ -42,25 +42,17 @@
 \begin{equation*}
     \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}}, \quad \vb*{p} = \pdv{\lagr}{\vb*{v}} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = \frac{E \vb*{v}}{c^2}, \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = c \sqrt{\vb*{p}^2 + m^2 c^2}.
 \end{equation*}
-此外, 有质能方程$ E^2 = \vb*{p}^2 c^2 + m^2 c^4 $, 静止的自由粒子也具有静止质量$ mc^2 $. 质量不为零的自由粒子不可能以光速运动. 在非相对论极限下, 粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 $. 粒子的运动方程为
-\begin{equation*}
-    \dv{\vb*{p}}{t}=0.
-\end{equation*}
-我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ r^{\mu} $为四维坐标. 采用变分法, 我们有
+此外, 有质能方程$ E^2 = \vb*{p}^2 c^2 + m^2 c^4 $, 静止的自由粒子也具有\textbf{静止质量}$ mc^2 $. 质量不为零的自由粒子不可能以光速运动. 在非相对论极限下, 粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 $. 粒子的运动方程为$ \dv*{\vb*{p}}{t}=0 $. 我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ r^{\mu} $为四维坐标. 采用变分法, 我们有
 \begin{equation*}
     \var{\action} = -mc \int_a^b \var{\sqrt{\dd{r^{\mu}} \dd{r_{\mu}}}} = -mc \int_a^b \frac{\dd{r^{\mu}} \dd{\var{r_{\mu}}}}{\dd{s}} = \eval{-mc \dv{r^{\mu}}{s} \var{r_{\mu}}}_a^b + mc \int_a^b \dd{s} \var{r_{\mu}} \dv{s} \dv{r^{\mu}}{s} = 0.
 \end{equation*}
-由于$ \var{r_{\mu}(a)}=\var{r_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{r^{\mu}}{s} \var{r_{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{r_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
-\begin{equation*}
-    \dv[2]{r^{\mu}}{s} = 0.
-\end{equation*}
-我们称$ v^{\mu}=\dv*{r^{\mu}}{s}=(\gamma,\gamma \vb*{v}/c) $为粒子的\textbf{四维速度}, $ a^{\mu}=\dv*{v^{\mu}}{s}=(\gamma^4 (\vb*{v} \vdot \vb*{a})/c^2,\gamma^2\vb*{a}/c + \gamma^4 (\vb*{v} \vdot \vb*{a}) \vb*{v}/c^3) $为粒子的\textbf{四维加速度}, 称$ p^{\mu} = mcv^{\mu}= (\gamma mc, \gamma m \vb*{v}) = (E/c,\vb*{p}) $为粒子的\textbf{四维动量}, 称$ f^{\mu}=\dv*{p^{\mu}}{s}=mc\dv*{v^{\mu}}{s}=(\gamma (\vb*{f} \vdot \vb*{v})/c^2,\gamma\vb*{f}/c) $为粒子的\textbf{四维力}. 其中, $ \vb*{a}=\dv*{\vb*{v}}{t} $是广义加速度, $ \vb*{f}=\dv*{\vb*{p}}{t} $是广义力. 由于四维速度, 四维加速度, 四维动量, 四维力都是四矢量, 它们在洛伦兹变换下的变换规则与四维坐标的变换规则一致. 注意, $ v_{\mu} v^{\mu}=1 $, $ a_{\mu} v^{\mu}=0 $, $ f_{\mu} v^{\mu} = 0 $恒成立. 此外, 静止质量为$ m $的粒子的四维动量$ p^{\mu} $和其自身的内积为$ p^{\mu} p_{\mu} = (E/c)^2 - \vb*{p}^2 = m^2 c^2 $.
+由于$ \var{r_{\mu}(a)}=\var{r_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{r^{\mu}}{s} \var{r_{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{r_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式$ \dv*[2]{r^{\mu}}{s} = 0 $. 我们称$ v^{\mu}=\dv*{r^{\mu}}{s}=(\gamma,\gamma \vb*{v}/c) $为粒子的\textbf{四维速度}, $ a^{\mu}=\dv*{v^{\mu}}{s}=(\gamma^4 (\vb*{v} \vdot \vb*{a})/c^2,\gamma^2\vb*{a}/c + \gamma^4 (\vb*{v} \vdot \vb*{a}) \vb*{v}/c^3) $为粒子的\textbf{四维加速度}, 称$ p^{\mu} = mcv^{\mu}= (\gamma mc, \gamma m \vb*{v}) = (E/c,\vb*{p}) $为粒子的\textbf{四维动量}, 称$ f^{\mu}=\dv*{p^{\mu}}{s}=mc\dv*{v^{\mu}}{s}=(\gamma (\vb*{f} \vdot \vb*{v})/c^2,\gamma\vb*{f}/c) $为粒子的\textbf{四维力}. 其中, $ \vb*{a}=\dv*{\vb*{v}}{t} $是广义加速度, $ \vb*{f}=\dv*{\vb*{p}}{t} $是广义力. 由于四维速度, 四维加速度, 四维动量, 四维力都是四矢量, 它们在洛伦兹变换下的变换规则与四维坐标的变换规则一致. 注意, $ v_{\mu} v^{\mu}=1 $, $ a_{\mu} v^{\mu}=0 $, $ f_{\mu} v^{\mu} = 0 $恒成立. 此外, 静止质量为$ m $的粒子的四维动量$ p^{\mu} $和其自身的内积为$ p^{\mu} p_{\mu} = (E/c)^2 - \vb*{p}^2 = m^2 c^2 $.
 
 我们考虑狭义相对论时空观下的粒子与外场间存在相互作用时的力学量和运动方程, 此时需要区分外场在洛伦兹变换下的性质. 如果外场是洛伦兹标量, 则与外场间存在相互作用的粒子的哈密顿作用量, 拉格朗日量, 运动方程分别为
 \begin{equation*}
     \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}, \quad \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)}, \quad \dv{\vb*{p}}{t} = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)} \pdv{\varPhi(\vb*{x},t)}{t}.
 \end{equation*}
-其中, $ \varPhi(\vb*{x}) $是标量外场, 当$ \varPhi(\vb*{x}) $恒为零时即为自由粒子情形. 在非相对论极限下, 令$ V(\vb*{x},t) $是粒子与标量外场的相互作用能(称为\textbf{势能}), 标量外场$ \varPhi(\vb*{x},t)=V(\vb*{x},t)/mc^2 $, 此时粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 - V(\vb*{x},t) $, 其中. 如果外场是洛伦兹矢量, 则与外场间存在相互作用的粒子的哈密顿作用量为
+其中, $ \varPhi(\vb*{x}) $是标量外场, 当$ \varPhi(\vb*{x}) $恒为零时即为自由粒子情形. 在非相对论极限下, 令$ V(\vb*{x},t) $是粒子与标量外场的相互作用能(称为\textbf{势能}), 标量外场$ \varPhi(\vb*{x},t)=V(\vb*{x},t)/mc^2 $, 此时粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 - V(\vb*{x},t) $. 如果外场是洛伦兹矢量, 则与外场间存在相互作用的粒子的哈密顿作用量为
 \begin{equation*}
     \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}}.
 \end{equation*}
@@ -76,11 +68,19 @@
 \begin{equation*}
     mc \dv[2]{r_{\mu}}{s} = \frac{e}{c} F_{\mu\nu} \dv{r^{\nu}}{s} = \frac{e}{c} \smdet{\partial_{\mu} & \partial_{\nu} \\ A_{\mu} & A_{\nu}} \dv{r^{\nu}}{s}.
 \end{equation*}
-注意, 影响粒子运动方程的不是矢量势$ A_{\mu} $本身, 而是其派生出的$ F_{\mu\nu} $ (或表示为$ \vb*{E},\vb*{B} $). 事实上, 矢量势$ A_{\mu} $经\textbf{规范变换}$ \tilde{A}_{\mu}(\vb*{x}) = A_{\mu}(\vb*{x}) + \partial_{\mu} \varPhi(\vb*{x}) $后哈密顿作用量变为
+其中, $ F_{\mu\nu}=\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} $是矢量外场$ A_{\mu} (\vb*{x}) $的场强的二阶反对称张量, $ F_{01}=\vb*{E}_1 $, $ F_{02}=\vb*{E}_2 $, $ F_{03}=\vb*{E}_3 $, $ F_{12}=-\vb*{B}_3 $, $ F_{13}=\vb*{B}_2 $, $ F_{23}=-\vb*{B}_1 $, 其余分量$ F_{\mu\nu} $均为零. 注意, 影响粒子运动方程的不是矢量势$ A_{\mu} $本身, 而是其派生出的场强张量$ F_{\mu\nu} $. 事实上, 矢量势$ A_{\mu} $经\textbf{规范变换}$ \tilde{A}_{\mu}(\vb*{x}) = A_{\mu}(\vb*{x}) + \partial_{\mu} \varPhi(\vb*{x}) $后哈密顿作用量变为
 \begin{equation*}
     \tilde{\action} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} - \frac{e}{c} \int_a^b \pdv{\varPhi(\vb*{x})}{x^{\mu}} \dd{x^{\mu}} = \action - \frac{e}{c} (\varPhi(\vb*{x}_b) - \varPhi(\vb*{x}_a)),
 \end{equation*}
-其中$ \varPhi(\vb*{x}) $是任意标量场. 由于$ \var{\tilde{\action}} = \var{\action} $, 粒子的运动方程在矢量外场的矢量势的规范变换下保持不变, 矢量外场存在\textbf{规范对称性}. 电磁场通常被认为是一个洛伦兹矢量场, 与电磁场间存在相互作用的带电粒子是前述与矢量外场间存在相互作用的粒子的特例, 此时耦合强度$ e $是粒子的一种内秉性质(称为\textbf{电荷}), $ \vb*{E} $称为\textbf{电场强度}, $ \vb*{B} $称为\textbf{磁感应强度}, $ F_{\mu\nu} $是电磁场场强的二阶反对称张量. 如果外场是洛伦兹二阶张量, 且该二阶张量本身也在运动, 就会得到广义相对论.
+其中$ \varPhi(\vb*{x}) $是任意标量场. 由于$ \var{\tilde{\action}} = \var{\action} $, 粒子的运动方程在矢量外场的矢量势的规范变换下保持不变, 因此矢量外场存在\textbf{规范对称性}. 令$ \tilde{F}^{\mu\nu} = 0.5 \epsilon^{\mu\nu\rho\sigma} F_{\rho\sigma} $是场强张量$ F_{\mu\nu} $的Hodge对偶, $ \tilde{F}_{01}=\vb*{B}_1 $, $ \tilde{F}_{02}=\vb*{B}_2 $, $ \tilde{F}_{03}=\vb*{B}_3 $, $ \tilde{F}_{12}=\vb*{E}_3 $, $ \tilde{F}_{13}=-\vb*{E}_2 $, $ \tilde{F}_{23}=\vb*{E}_1 $, 其余分量$ \tilde{F}_{\mu\nu} $均为零. 由于场强张量满足Bianchi恒等式
+\begin{equation*}
+    \partial_{\mu} \tilde{F}^{\mu\nu} = \partial_{\mu}F_{\nu\rho} + \partial_{\nu}F_{\rho\mu} + \partial_{\rho}F_{\mu\nu} = 0,
+\end{equation*}
+我们可以得到$ \curl{E} = - \pdv*{\vb*{B}}{t} $和$ \div{\vb*{B}} = 0 $. 场强张量在洛伦兹变换下的变换规则为$ F'_{\mu'\nu'} = \varLambda_{\mu'}{}^{\mu} \varLambda_{\nu'}{}^{\nu} F_{\mu\nu} $. 对于仅含boost而不含三维空间转动的洛伦兹变换, 可以进一步给出$ \vb*{E} $和$ \vb*{B} $在洛伦兹变换下的变换规则为
+\begin{equation*}
+    \vb*{E}' = \gamma (\vb*{E} + \vb*{\beta} \cross \vb*{B}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{E}) \vb*{\beta}, \quad \vb*{B}' = \gamma (\vb*{B} + \vb*{\beta} \cross \vb*{E}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{B}) \vb*{\beta}.
+\end{equation*}
+电磁场通常被认为是一个洛伦兹矢量场, 与电磁场间存在相互作用的带电粒子是前述与矢量外场间存在相互作用的粒子的特例, 此时耦合强度$ e $是粒子的一种内秉性质(称为\textbf{电荷}), $ \vb*{E} $称为\textbf{电场强度}, $ \vb*{B} $称为\textbf{磁感应强度}. 如果外场是洛伦兹二阶张量, 且该二阶张量本身也在运动, 就会得到广义相对论.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section[分析力学]{分析力学}\label{分析力学}
