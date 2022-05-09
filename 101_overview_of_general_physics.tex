@@ -1,7 +1,8 @@
 \chapter[普通物理概要]{普通物理概要}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[狭义相对论]{狭义相对论}\label{狭义相对论}
-现代物理与\textbf{时空观}是密切联系在一起的. 如果不考虑广义相对论, 物理规律是在一个时空背景上加以描述的, 而该时空背景就是\textbf{参考系}. 参考系中一定时空点发生的物理现象称为\textbf{事件}. \textbf{惯性系}是一类特殊的参考系, 一个不受外力的运动物体在惯性系中保持恒定速度, 一个相对某惯性系作匀速直线运动的惯性系也是惯性系. 物理规律虽然是基于某个具体的参考系来描述的, 但规律本身实际上是不依赖于匀速的惯性参考系的选取的, 这就是伽利略的\textbf{相对性原理}. 伽利略的绝对时空观和爱因斯坦的狭义相对论时空观都承认相对性原理, 但是绝对时空观承认\textbf{瞬时相互作用原理}, 而狭义相对论时空观承认\textbf{光速不变原理}.
+\newpage
+\section[分析力学]{分析力学}\label{分析力学}
+分析力学与\textbf{时空观}是密切联系在一起的. 如果不考虑广义相对论, 物理规律是在一个时空背景上加以描述的, 而该时空背景就是\textbf{参考系}. 参考系中一定时空点发生的物理现象称为\textbf{事件}. \textbf{惯性系}是一类特殊的参考系, 一个不受外力的运动物体在惯性系中保持恒定速度, 一个相对某惯性系作匀速直线运动的惯性系也是惯性系. 物理规律虽然是基于某个具体的参考系来描述的, 但规律本身实际上是不依赖于匀速的惯性参考系的选取的, 这就是伽利略的\textbf{相对性原理}. 伽利略的绝对时空观和爱因斯坦的狭义相对论时空观都承认相对性原理, 但是绝对时空观承认\textbf{瞬时相互作用原理}, 而狭义相对论时空观承认\textbf{光速不变原理}.
 \begin{postulate}[时空观的基本假设]\label{pos:时空观的基本假设}
     绝对时空观承认相对性原理和瞬时相互作用原理, 狭义相对论时空观承认相对性原理和光速不变原理.
     \begin{itemize}
@@ -16,10 +17,10 @@
 
 我们可以采用具有不同变换规则的两套记号来表示四维坐标. 如果$ r^{\mu}=(r^0,r^1,r^2,r^3)=(ct,x,y,z) $, 则称$ r^{\mu} $为\textbf{逆变四矢量}. 如果$ r_{\mu}=(r^0,-r^1,-r^2,-r^3)=(ct,-x,-y,-z) $, 则称$ r_{\mu} $为\textbf{协变四矢量}. 逆变四矢量和协变四矢量通过升高或降低指标来转换, 即$ r_{\mu}=\eta_{\mu\nu} r^{\nu} $, $ r^{\mu}=\eta^{\mu\nu} r_{\nu} $, $ \eta_{\mu\beta}\eta^{\beta\nu}=\delta_{\mu}^{\nu} $. 其中, $ \eta_{\mu\nu} $为闵可夫斯基空间的\textbf{度规张量}, $ \eta^{\mu\nu} $为闵可夫斯基空间的度规张量的逆, $ \delta_{\mu}^{\nu} $为克罗内克记号. 容易发现, $ \eta_{00}=\eta^{00}=1 $, 且对意$ i \in \{1,2,3\} $都有$ \eta_{ii}=\eta^{ii}=-1 $. 前述将度规张量$ \eta_{\mu\nu} $中的一个协变指标$ \nu $和逆变四矢量$ r^{\nu} $的逆变指标按照爱因斯坦求和规则求和并得到一个协变四矢量$ r_{\mu} $的过程称为指标的\textbf{缩并}. 所有缩并一定是在一个协变指标(下标)和一个逆变指标(上标)之间进行. 给定协变四矢量$ A_{\mu} $和逆变四矢量$ B^{\mu} $, 两者相乘并缩并指标可得$ A_{\mu} $和$ B^{\mu} $的\textbf{内积}$ A \cdot B = A_{\mu}B^{\mu} = A^{\mu}B_{\mu} $, 该内积$ A \cdot B $在洛伦兹变换下保持不变. 闵可夫斯基空间中两个无限接近的点(事件)之间的不变间隔的平方为$ \dd r^2 = \dd{r^{\mu}} \dd{r_{\mu}} = \eta_{\mu\nu} \dd{r^{\mu}} \dd{r^{\nu}} = \eta^{\mu\nu} \dd{r_{\mu}} \dd{r_{\nu}} $, 可以发现它是$ \dd{r} $和其自身的内积.
 
-逆变四矢量在洛伦兹变换下仍为逆变四矢量, 即$ r^{\prime\mu} = \varLambda^{\mu}{\!}_{\nu} r^{\nu} $, 其中$ \varLambda^{\mu}{\!}_{\nu} $是洛伦兹变换矩阵. 一个任意的洛伦兹变换类似于``四维空间中的广义转动'', 它可以分解为六种基本``转动''的合成, 分别对应``0-1, 0-2, 0-3平面内的转动''和``1-2, 1-3, 2-3平面内的转动'', 前三者为相应方向上的boost, 后三者类似于普通三维空间内的转动, 更多相关讨论可参考有关洛伦兹群的相关理论. 如果其他物理量也能满足前述洛伦兹变换的规则, 我们可以将逆变四矢量的相关约定应用在这些物理量上. 通过度规张量可将协变四矢量的相关约定应用在这些物理量上, 即$ r^{\prime}_{\mu} = \varLambda_{\mu\nu} r^{\nu} = \varLambda_{\mu}{\!}^{\nu} r_{\nu} $, 其中$ \varLambda_{\mu\nu} = \eta_{\mu\beta} \varLambda^{\beta}{\!}_{\nu} $, $ \varLambda_{\mu}{\!}^{\nu} = \eta_{\mu\beta} \varLambda^{\beta}{\!}_{\alpha} \eta^{\alpha\nu} $. 一个具有任意个上标或下标的四维张量在洛伦兹变换下的变换规则就是它的每个上标(或下标)都按照相应的逆变四矢量(或协变四矢量)的变换规则来进行变换. 例如, 张量$ A^{\mu\nu}{\!}_{\rho\sigma\tau} $在洛伦兹变换下的规则是$ A^{\prime\mu'\nu'}{\!}_{\rho'\sigma'\tau'} = \varLambda^{\mu'}{\!}_{\mu} \varLambda^{\nu'}{\!}_{\nu} \varLambda_{\rho'}{\!}^{\rho} \varLambda_{\sigma'}{\!}^{\sigma} \varLambda_{\nu'}{\!}^{\nu} A^{\mu\nu}{\!}_{\rho\sigma\tau} $. 各阶张量是唯一的在洛伦兹变换下具有确定变换性质的数学对象. 如果一个物理理论要符合狭义相对论的要求, 表述它的数学方程一定是用正确的张量形式写出来的, 此时该方程描述的物理规律才可能在不同参考系中普遍成立.
+逆变四矢量在洛伦兹变换下仍为逆变四矢量, 即$ r^{\prime\mu} = \varLambda^{\mu}{\!}_{\nu} r^{\nu} $, 其中$ \varLambda^{\mu}{\!}_{\nu} $是洛伦兹变换矩阵. 一个任意的洛伦兹变换类似于``四维空间中的广义转动'', 它可以分解为六种基本``转动''的合成, 分别对应``0-1, 0-2, 0-3平面内的转动''和``1-2, 1-3, 2-3平面内的转动'', 前三者为相应方向上的推动, 后三者类似于普通三维空间内的转动, 更多相关讨论可参考有关洛伦兹群的相关理论. 如果其他物理量也能满足前述洛伦兹变换的规则, 我们可以将逆变四矢量的相关约定应用在这些物理量上. 通过度规张量可将协变四矢量的相关约定应用在这些物理量上, 即$ r^{\prime}_{\mu} = \varLambda_{\mu\nu} r^{\nu} = \varLambda_{\mu}{\!}^{\nu} r_{\nu} $, 其中$ \varLambda_{\mu\nu} = \eta_{\mu\beta} \varLambda^{\beta}{\!}_{\nu} $, $ \varLambda_{\mu}{\!}^{\nu} = \eta_{\mu\beta} \varLambda^{\beta}{\!}_{\alpha} \eta^{\alpha\nu} $. 一个具有任意个上标或下标的四维张量在洛伦兹变换下的变换规则就是它的每个上标(或下标)都按照相应的逆变四矢量(或协变四矢量)的变换规则来进行变换. 例如, 张量$ A^{\mu\nu}{\!}_{\rho\sigma\tau} $在洛伦兹变换下的规则是$ A^{\prime\mu'\nu'}{\!}_{\rho'\sigma'\tau'} = \varLambda^{\mu'}{\!}_{\mu} \varLambda^{\nu'}{\!}_{\nu} \varLambda_{\rho'}{\!}^{\rho} \varLambda_{\sigma'}{\!}^{\sigma} \varLambda_{\nu'}{\!}^{\nu} A^{\mu\nu}{\!}_{\rho\sigma\tau} $. 各阶张量是唯一的在洛伦兹变换下具有确定变换性质的数学对象. 如果一个物理理论要符合狭义相对论的要求, 表述它的数学方程一定是用正确的张量形式写出来的, 此时该方程描述的物理规律才可能在不同参考系中普遍成立.
 
 \begin{proposition}[张量的微分与积分]\label{pro:张量的微分与积分}
-    闵可夫斯基空间内的张量可以进行微分, 张量可以是零阶的标量场, 一阶的矢量场, 二阶的张量场等. 给定张量$ T(\vb*{x}) $, 定义微分算符$ \partial_{\mu} $满足$ \partial_{\mu} T(\vb*{x}) = \pdv*{T(\vb*{x})}{x^{\mu}} $, 显然$ \partial_{\mu} T(\vb*{x}) $比$ T(\vb*{x}) $多一个协变指标. 通过度规张量升高指标可以得到具有逆变指标的微分算符$ \partial^{\mu}=\eta^{\mu\nu}\partial_{\nu} $. 对于标量场$ \varPhi(\vb*{x}) $, 有$ \partial_{\mu}=(\frac{1}{c}\pdv{t},\grad) $, 因此缩并两个作用于$ \varPhi(\vb*{x}) $的微分算符$ \partial^{\mu} $和$ \partial_{\mu} $, 可得到标量算符$ -\square = \partial^{\mu} \partial_{\mu} = \frac{1}{c^2} \pdv[2]{t} - \laplacian $, 其中$ \square $称为达朗贝尔算符. 对于矢量场$ A^{\mu}(\vb*{x}) $, 有标量$ \partial_{\mu}A^{\mu}=\partial^{\mu}A_{\mu}=\pdv*{A^0}{x^0} + \div{\vb*{A}} $.
+    闵可夫斯基空间内的张量可以进行微分, 张量可以是零阶的标量场, 一阶的矢量场, 二阶的张量场等. 给定张量$ T(\vb*{x}) $, 定义微分算符$ \partial_{\mu} $满足$ \partial_{\mu} T(\vb*{x}) = \pdv*{T(\vb*{x})}{x^{\mu}} $, 显然$ \partial_{\mu} T(\vb*{x}) $比$ T(\vb*{x}) $多一个协变指标. 通过度规张量升高指标可以得到具有逆变指标的微分算符$ \partial^{\mu}=\eta^{\mu\nu}\partial_{\nu} $. 对于标量场$ \varPhi(\vb*{x}) $, 有$ \partial_{\mu}=(\frac{1}{c}\pdv{t},\grad) $和$ \partial^{\mu}=(\frac{1}{c}\pdv{t},-\grad) $, 因此缩并两个作用于$ \varPhi(\vb*{x}) $的微分算符$ \partial^{\mu} $和$ \partial_{\mu} $, 可得到标量算符$ -\square = \partial^{\mu} \partial_{\mu} = \frac{1}{c^2} \pdv[2]{t} - \laplacian $, 其中$ \square $称为达朗贝尔算符. 对于矢量场$ A^{\mu}(\vb*{x}) $, 有标量$ \partial_{\mu}A^{\mu}=\partial^{\mu}A_{\mu}=\pdv*{A^0}{x^0} + \div{\vb*{A}} $.
 
     闵可夫斯基空间内的张量也可进行积分, 积分可以沿一维闭合回路, 二维闭合曲面或三维闭合超曲面进行. 一维闭合曲线上的线元(一阶张量)可表示为$ \dd{x^{\mu}} $, 二维闭合曲面上的面元(二阶张量)可表示为$ \dd{S^{\mu\nu}} $, 三维闭合超曲面上的超曲面元(三阶张量)可表示为$ \dd{V^{\mu\nu\rho}} $, 四维闭合空间上的体元(四阶张量)可表示为$ \dd[4]{\vb*{x}} $.
     \begin{equation*}
@@ -34,57 +35,7 @@
     更多相关内容参考微分几何和张量分析相关专著.
 \end{proposition}
 
-我们考虑狭义相对论时空观下的自由粒子的力学量和运动方程. 自由粒子的哈密顿作用量应与参考系的选择无关, 因此它在洛伦兹变换下是保持不变的. 当我们将最小作用量原理和作用量的洛伦兹不变性等基本原理相结合, 可以唯一确定自由粒子的哈密顿作用量为
-\begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s}.
-\end{equation*}
-其中, $ c $是光速, $ m $是粒子的一种内秉性质(称为\textbf{质量}), $ \dd{s} = c \dd{\tau} = c\dd{t} \sqrt{1-\vb*{v}^2/c^2} = c \dd{t}/\gamma $是粒子运动的不变间隔, $ \dd{\tau} $是固有时间间隔, $ \vb*{v} = \dv*{\vb*{r}}{t} $是粒子的广义速度. 因此, 粒子的拉格朗日量, 广义动量, 广义能量分别为
-\begin{equation*}
-    \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}}, \quad \vb*{p} = \pdv{\lagr}{\vb*{v}} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = \frac{E \vb*{v}}{c^2}, \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = c \sqrt{\vb*{p}^2 + m^2 c^2}.
-\end{equation*}
-此外, 有质能方程$ E^2 = \vb*{p}^2 c^2 + m^2 c^4 $, 静止的自由粒子也具有\textbf{静止质量}$ mc^2 $. 质量不为零的自由粒子不可能以光速运动. 在非相对论极限下, 粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 $. 粒子的运动方程为$ \dv*{\vb*{p}}{t}=0 $. 我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ r^{\mu} $为四维坐标. 采用变分法, 我们有
-\begin{equation*}
-    \var{\action} = -mc \int_a^b \var{\sqrt{\dd{r^{\mu}} \dd{r_{\mu}}}} = -mc \int_a^b \frac{\dd{r^{\mu}} \dd{\var{r_{\mu}}}}{\dd{s}} = \eval{-mc \dv{r^{\mu}}{s} \var{r_{\mu}}}_a^b + mc \int_a^b \dd{s} \var{r_{\mu}} \dv{s} \dv{r^{\mu}}{s} = 0.
-\end{equation*}
-由于$ \var{r_{\mu}(a)}=\var{r_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{r^{\mu}}{s} \var{r_{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{r_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式$ \dv*[2]{r^{\mu}}{s} = 0 $. 我们称$ v^{\mu}=\dv*{r^{\mu}}{s}=(\gamma,\gamma \vb*{v}/c) $为粒子的\textbf{四维速度}, $ a^{\mu}=\dv*{v^{\mu}}{s}=(\gamma^4 (\vb*{v} \vdot \vb*{a})/c^2,\gamma^2\vb*{a}/c + \gamma^4 (\vb*{v} \vdot \vb*{a}) \vb*{v}/c^3) $为粒子的\textbf{四维加速度}, 称$ p^{\mu} = mcv^{\mu}= (\gamma mc, \gamma m \vb*{v}) = (E/c,\vb*{p}) $为粒子的\textbf{四维动量}, 称$ f^{\mu}=\dv*{p^{\mu}}{s}=mc\dv*{v^{\mu}}{s}=(\gamma (\vb*{f} \vdot \vb*{v})/c^2,\gamma\vb*{f}/c) $为粒子的\textbf{四维力}. 其中, $ \vb*{a}=\dv*{\vb*{v}}{t} $是广义加速度, $ \vb*{f}=\dv*{\vb*{p}}{t} $是广义力. 由于四维速度, 四维加速度, 四维动量, 四维力都是四矢量, 它们在洛伦兹变换下的变换规则与四维坐标的变换规则一致. 注意, $ v_{\mu} v^{\mu}=1 $, $ a_{\mu} v^{\mu}=0 $, $ f_{\mu} v^{\mu} = 0 $恒成立. 此外, 静止质量为$ m $的粒子的四维动量$ p^{\mu} $和其自身的内积为$ p^{\mu} p_{\mu} = (E/c)^2 - \vb*{p}^2 = m^2 c^2 $.
-
-我们考虑狭义相对论时空观下的粒子与外场间存在相互作用时的力学量和运动方程, 此时需要区分外场在洛伦兹变换下的性质. 如果外场是洛伦兹标量, 则与外场间存在相互作用的粒子的哈密顿作用量, 拉格朗日量, 运动方程分别为
-\begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}, \quad \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)}, \quad \dv{\vb*{p}}{t} = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)} \pdv{\varPhi(\vb*{x},t)}{t}.
-\end{equation*}
-其中, $ \varPhi(\vb*{x}) $是标量外场, 当$ \varPhi(\vb*{x}) $恒为零时即为自由粒子情形. 在非相对论极限下, 令$ V(\vb*{x},t) $是粒子与标量外场的相互作用能(称为\textbf{势能}), 标量外场$ \varPhi(\vb*{x},t)=V(\vb*{x},t)/mc^2 $, 此时粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 - V(\vb*{x},t) $. 如果外场是洛伦兹矢量, 则与外场间存在相互作用的粒子的哈密顿作用量为
-\begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}}.
-\end{equation*}
-其中, $ e $是粒子与矢量场的耦合强度, $ A_{\mu} (\vb*{x})=(\varPhi(\vb*{x}),\vb*{A}(\vb*{x})) $是矢量外场, $ \varPhi(\vb*{x}) $是四矢量$ A_{\mu} (\vb*{x}) $的标量势(时间分量), $ \vb*{A}(\vb*{x}) $是四矢量$ A_{\mu} (\vb*{x}) $的矢量势(三个空间分量). 粒子的拉格朗日量, 广义动量, 广义能量分别为
-\begin{equation*}
-    \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} + \frac{e}{c} (\vb*{v} \vdot \vb*{A}(\vb*{x})) - e \varPhi(\vb*{x}), \quad \vb*{p} = \pdv{\lagr}{\vb*{v}} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} + \frac{e}{c} \vb*{A}(\vb*{x}), \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} + e \varPhi(\vb*{x}).
-\end{equation*}
-在非相对论极限下, 粒子的拉格朗日量为$ \lagr = 0.5 m\vb*{v}^2 + \frac{e}{c} (\vb*{v} \vdot \vb*{A}(\vb*{x},t)) - e \varPhi(\vb*{x},t) $. 粒子的运动方程为
-\begin{equation*}
-    \dv{\vb*{p}}{t} = e\vb*{E} + \frac{e}{c} \vb*{v} \cross \vb*{B} = e \bigg( -\grad{\varPhi}-\frac{1}{c}\pdv{\vb*{A}}{t}\bigg) + \frac{e}{c} \vb*{v} \cross (\curl{\vb*{A}}).
-\end{equation*}
-粒子的运动方程的四维协变形式为
-\begin{equation*}
-    mc \dv[2]{r_{\mu}}{s} = \frac{e}{c} F_{\mu\nu} \dv{r^{\nu}}{s} = \frac{e}{c} \smdet{\partial_{\mu} & \partial_{\nu} \\ A_{\mu} & A_{\nu}} \dv{r^{\nu}}{s}.
-\end{equation*}
-其中, $ F_{\mu\nu}=\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} $是矢量外场$ A_{\mu} (\vb*{x}) $的场强的二阶反对称张量, $ F_{01}=\vb*{E}_1 $, $ F_{02}=\vb*{E}_2 $, $ F_{03}=\vb*{E}_3 $, $ F_{12}=-\vb*{B}_3 $, $ F_{13}=\vb*{B}_2 $, $ F_{23}=-\vb*{B}_1 $, 其余分量$ F_{\mu\nu} $均为零. 注意, 影响粒子运动方程的不是矢量势$ A_{\mu} $本身, 而是其派生出的场强张量$ F_{\mu\nu} $. 事实上, 矢量势$ A_{\mu} $经\textbf{规范变换}$ \tilde{A}_{\mu}(\vb*{x}) = A_{\mu}(\vb*{x}) + \partial_{\mu} \varPhi(\vb*{x}) $后哈密顿作用量变为
-\begin{equation*}
-    \tilde{\action} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} - \frac{e}{c} \int_a^b \pdv{\varPhi(\vb*{x})}{x^{\mu}} \dd{x^{\mu}} = \action - \frac{e}{c} (\varPhi(\vb*{x}_b) - \varPhi(\vb*{x}_a)),
-\end{equation*}
-其中$ \varPhi(\vb*{x}) $是任意标量场. 由于$ \var{\tilde{\action}} = \var{\action} $, 粒子的运动方程在矢量外场的矢量势的规范变换下保持不变, 因此矢量外场存在\textbf{规范对称性}. 令$ \tilde{F}^{\mu\nu} = 0.5 \epsilon^{\mu\nu\rho\sigma} F_{\rho\sigma} $是场强张量$ F_{\mu\nu} $的Hodge对偶, $ \tilde{F}_{01}=\vb*{B}_1 $, $ \tilde{F}_{02}=\vb*{B}_2 $, $ \tilde{F}_{03}=\vb*{B}_3 $, $ \tilde{F}_{12}=\vb*{E}_3 $, $ \tilde{F}_{13}=-\vb*{E}_2 $, $ \tilde{F}_{23}=\vb*{E}_1 $, 其余分量$ \tilde{F}_{\mu\nu} $均为零. 由于存在Bianchi恒等式
-\begin{equation*}
-    \partial_{\mu} \tilde{F}^{\mu\nu} = \partial_{\mu}F_{\nu\rho} + \partial_{\nu}F_{\rho\mu} + \partial_{\rho}F_{\mu\nu} = 0,
-\end{equation*}
-我们可以得到$ \curl{\vb*{E}} = - \pdv*{\vb*{B}}{t} $和$ \div{\vb*{B}} = 0 $. 场强张量在洛伦兹变换下的变换规则为$ F'_{\mu'\nu'} = \varLambda_{\mu'}{}^{\mu} \varLambda_{\nu'}{}^{\nu} F_{\mu\nu} $. 对于仅含boost而不含三维空间转动的洛伦兹变换, 可以进一步给出$ \vb*{E} $和$ \vb*{B} $在洛伦兹变换下的变换规则为
-\begin{equation*}
-    \vb*{E}' = \gamma (\vb*{E} + \vb*{\beta} \cross \vb*{B}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{E}) \vb*{\beta}, \quad \vb*{B}' = \gamma (\vb*{B} + \vb*{\beta} \cross \vb*{E}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{B}) \vb*{\beta}.
-\end{equation*}
-电磁场通常被认为是一个洛伦兹矢量场, 与电磁场间存在相互作用的带电粒子是前述与矢量外场间存在相互作用的粒子的特例, 此时耦合强度$ e $是粒子的一种内秉性质(称为\textbf{电荷}), $ \vb*{E} $称为\textbf{电场强度}, $ \vb*{B} $称为\textbf{磁感应强度}. 如果外场是洛伦兹二阶张量, 且该二阶张量本身也在运动, 就会得到广义相对论.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section[分析力学]{分析力学}\label{分析力学}
-分析力学基于参考系描述力学体系. 当给定物体的尺寸和形状对运动问题的影响不大时, 可将该物体视作没有尺寸和形状的几何点处理来简化问题, 此即为分析力学中广泛应用的\textbf{质点模型}. 质点在参考坐标系中的位置可用\textbf{径矢}$ \vb*{r} $表示, 质点所处的时间可用$ t $表示. 由多个质点通过某种方式构成的集合称为\textbf{质点系}. 经验表明, 给定质点系中所有质点的位置和速度就可以确定质点系当前的状态, 并且原则上可预测质点系今后的运动. 事实上, 当质点系在运动过程中受到一定\textbf{约束条件}的限制时, 并不需要确定所有质点的位置和速度即可确定质点系当前状态和预测今后运动. 考虑一个具有$ n $个质点的质点系, 对其的约束条件可记作$ f(\vb*{r}_1,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t)=0 $或$ f(\vb*{r}_1,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t) \geq 0 $. 前者称为\textbf{双面约束条件}, 后者称为\textbf{单面约束条件}. 双面约束条件可以分为\textbf{完整约束}和\textbf{非完整约束}, 完整约束可减少一个独立坐标和一个独立速度分量, 非完整约束只能减少一个独立速度分量. 完整约束又可分为\textbf{几何约束}和\textbf{可积运动约束}, 几何约束$ f(\vb*{r}_1,\vb*{r}_2,\ldots,\vb*{r}_n,t)=0 $仅对质点系的几何位形加以限制, 可积运动约束同时对质点系的几何位形和运动情况加以限制, 但可以通过对其积分转化为几何约束. 所有约束条件都是完整约束的质点系称为\textbf{完整力学体系}, 否则称为\textbf{非完整力学体系}. 如果约束反力在任意虚位移上所作的功都等于零, 即$ \sum_i \vb*{F}_i \cdot \var{\vb*{r}_i} = 0 $, 则该约束条件称为\textbf{理想约束}. 其中, 约束反力是指约束条件对质点系中各质点产生的反作用力, 虚位移是指质点系中各质点在给定位置满足约束条件的任何无限小位移. 所有约束条件都是理想约束的质点系称为\textbf{理想力学体系}, 否则称为\textbf{非理想力学体系}. 今后我们只考虑理想完整力学体系. 此外, 存在耗散力的体系(即\textbf{非保守体系})已不是纯粹的力学体系, 因其复杂的微观机制而通常不能被直接处理, 但对一些简单的情形可近似地用力学方法处理.
+\textbf{质点模型}在分析力学中广泛使用, 当给定物体的尺寸和形状对运动问题的影响不大时, 即可将该物体视作没有尺寸和形状的几何点处理来简化问题. 质点在参考坐标系中的位置可用\textbf{径矢}$ \vb*{r} $表示, 质点所处的时间可用$ t $表示. 由多个质点通过某种方式构成的集合称为\textbf{质点系}. 经验表明, 给定质点系中所有质点的位置和速度就可以确定质点系当前的状态, 并且原则上可预测质点系今后的运动. 事实上, 当质点系在运动过程中受到一定\textbf{约束条件}的限制时, 并不需要确定所有质点的位置和速度即可确定质点系当前状态和预测今后运动. 考虑一个具有$ n $个质点的质点系, 对其的约束条件可记作$ f(\vb*{r}_1,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t)=0 $或$ f(\vb*{r}_1,\ldots,\vb*{r}_n,\dot{\vb*{r}_1},\dot{\vb*{r}_2},\ldots,\dot{\vb*{r}_n},t) \geq 0 $. 前者称为\textbf{双面约束条件}, 后者称为\textbf{单面约束条件}. 双面约束条件可以分为\textbf{完整约束}和\textbf{非完整约束}, 完整约束可减少一个独立坐标和一个独立速度分量, 非完整约束只能减少一个独立速度分量. 完整约束又可分为\textbf{几何约束}和\textbf{可积运动约束}, 几何约束$ f(\vb*{r}_1,\vb*{r}_2,\ldots,\vb*{r}_n,t)=0 $仅对质点系的几何位形加以限制, 可积运动约束同时对质点系的几何位形和运动情况加以限制, 但可以通过对其积分转化为几何约束. 所有约束条件都是完整约束的质点系称为\textbf{完整力学体系}, 否则称为\textbf{非完整力学体系}. 如果约束反力在任意虚位移上所作的功都等于零, 即$ \sum_i \vb*{F}_i \cdot \var{\vb*{r}_i} = 0 $, 则该约束条件称为\textbf{理想约束}. 其中, 约束反力是指约束条件对质点系中各质点产生的反作用力, 虚位移是指质点系中各质点在给定位置满足约束条件的任何无限小位移. 所有约束条件都是理想约束的质点系称为\textbf{理想力学体系}, 否则称为\textbf{非理想力学体系}. 今后我们只考虑理想完整力学体系. 此外, 存在耗散力的体系(即\textbf{非保守体系})已不是纯粹的力学体系, 因其复杂的微观机制而通常不能被直接处理, 但对一些简单的情形可近似地用力学方法处理.
 
 给定具有$ n $个质点和$ k $个相互独立的完整约束的理想完整力学体系, 我们至少需要$ 3n-k $个参数才能确定某时刻该力学体系中各质点位置, 即确定力学体系的位形. 我们称能够确定位形的最少参数$ 3n-k $为该力学体系的\textbf{独立广义坐标数}, 称能够唯一确定位形的一组$ 3n-k $个参数为该力学体系的\textbf{广义坐标}$ q $. 应当注意, 力学体系的广义坐标仅代表一些互相独立的参数, 它们可以是距离或角度等常见物理量, 也可以根本没有几何意义, 完整力学体系的\textbf{自由度}即为独立广义坐标数. 广义坐标$ q $对时间$ t $的导数$ \dv*{q}{t} $称为\textbf{广义速度}, 记作$ \dot{q} $. 广义坐标$ q $对时间$ t $的二阶导数$ \dv*[2]{q}{t} $称为\textbf{广义加速度}, 记作$ \ddot{q} $. 如果一个独立广义坐标数为$ s $的力学体系的广义坐标为$ (q_1,q_2,\ldots,q_s) $, 则其广义速度为$ (\dot{q_1},\dot{q_2},\ldots,\dot{q_s}) $, 广义加速度为$ (\ddot{q_1},\ddot{q_2},\ldots,\ddot{q_s}) $, 它们可形式上分别记作列向量$ \vb*{q},\dot{\vb*{q}},\ddot{\vb*{q}} $. 仿照质点的径矢的概念, 我们也可以对力学体系定义\textbf{广义位矢}$ (\vb*{r}_1(\vb*{q},t),\vb*{r}_2(\vb*{q},t),\ldots,\vb*{r}_n(\vb*{q},t)) $.
 
@@ -93,9 +44,8 @@
     \begin{equation}
         \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})=\int_{t_{\init}}^{t_{\fini}} \lagr(\vb*{q},\dot{\vb*{q}},t) \dd{t}
     \end{equation}
-    取极值(通常是极小值, 但也可能是鞍点或极大值).
+    取极值(通常是极小值, 但也可能是鞍点或极大值). 其中, $ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $称为体系的哈密顿作用量(常简称为作用量), $ \lagr(\vb*{q},\dot{\vb*{q}},t) $称为体系的拉格朗日函数.
 \end{postulate}
-其中, $ \lagr(\vb*{q},\dot{\vb*{q}},t) $称为体系的\textbf{拉格朗日函数}, $ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $称为体系的\textbf{哈密顿作用量}.
 
 我们运用变分法来获得体系在拉格朗日力学下的运动方程. 考虑哈密顿作用量$ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $的等时变分
 \begin{align*}
@@ -109,12 +59,20 @@
 \end{equation}
 力学体系的拉格朗日函数$ \lagr(\vb*{q},\dot{\vb*{q}},t) $具有\textbf{规范不定性}, 即在\textbf{定域规范变换}$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下有$ \var{\tilde{\action}(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})}=\var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})} $, 进而在定域规范变换下体系的欧拉{--}拉格朗日方程和运动规律也不变, 此即为体系的\textbf{规范不变性}.
 
-通过拉格朗日变量定义\textbf{广义动量}$ p=\pdv*{\lagr}{\dot{q}} $, 得\textbf{广义动量定理}: 对任意$ \alpha \in \{1,2,\ldots,s\} $有$ \dot{p_{\alpha}}=\pdv*{\lagr}{q_{\alpha}} $. 在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义动量为$ \tilde{p}_{\alpha}=p_{\alpha}+\pdv*{f}{q_{\alpha}} $, 因此广义动量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在空间内整体平移相同的位移, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} \vb*{e} $. 如果该体系的所有质点在空间内整体平移后的拉格朗日函数仍保持不变(即体系满足\textbf{空间平移不变性}或\textbf{空间均匀性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 考虑力学体系的所有质点在空间内整体旋转相同的角度, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} \times \vb*{r}_i $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} (\vb*{e} \times \vb*{r}_i) $. 如果该体系的所有质点在空间内整体旋转后的拉格朗日函数仍保持不变(即体系满足\textbf{空间转动不变性}或\textbf{空间各向同性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 现在我们考虑$ \lagr(\vb*{q},\dot{\vb*{q}},t) $对时间的导数
+通过拉格朗日变量定义\textbf{广义动量}$ p=\pdv*{\lagr}{\dot{q}} $和\textbf{广义力}$ F=\pdv*{\lagr}{q} $, 得\textbf{广义动量定理}
+\begin{equation}
+    \forall \alpha \in \{1,2,\ldots,s\}, \quad\dot{p_{\alpha}}=\pdv{\lagr}{q_{\alpha}}=F_{\alpha}.
+\end{equation}
+在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义动量为$ \tilde{p}_{\alpha}=p_{\alpha}+\pdv*{f}{q_{\alpha}} $, 因此广义动量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在空间内整体平移相同的位移, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} \vb*{e} $. 如果该体系的所有质点在空间内整体平移后的拉格朗日函数仍保持不变(即体系满足\textbf{空间平移不变性}或\textbf{空间均匀性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 考虑力学体系的所有质点在空间内整体旋转相同的角度, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} \times \vb*{r}_i $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} (\vb*{e} \times \vb*{r}_i) $. 如果该体系的所有质点在空间内整体旋转后的拉格朗日函数仍保持不变(即体系满足\textbf{空间转动不变性}或\textbf{空间各向同性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 现在我们考虑$ \lagr(\vb*{q},\dot{\vb*{q}},t) $对时间的导数
 \begin{align*}
     \dv{\lagr}{t} &= \sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \pdv{\lagr}{\dot{q_{\beta}}} \ddot{q_{\beta}} \bigg) + \pdv{\lagr}{t} = \sum_{\beta=1}^s \pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} - \sum_{\beta=1}^s \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \dot{q_{\beta}} + \pdv{\lagr}{t} \\
     &=\sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \bigg)\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} + \pdv{\lagr}{t} = \dv{t} \sum_{\beta=1}^s p_{\beta} \dot{q_{\beta}} + \pdv{\lagr}{t}.
 \end{align*}
-通过拉格朗日变量定义\textbf{广义能量}$ E=\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \lagr(\vb*{q},\dot{\vb*{q}},t) $, 得\textbf{广义能量定理}: $ \dot{E}=-\pdv*{\lagr}{t} $. 在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义能量为$ \tilde{E}=E-\pdv*{f}{t} $, 因此广义能量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在时间内整体平移, 如果该体系时间在平移后的拉格朗日函数仍保持不变(即体系满足\textbf{时间平移不变性}或\textbf{时间均匀性}), 即$ \pdv*{\lagr}{t}=0 $, 则$ \dot{E}=0 $.
+通过拉格朗日变量定义\textbf{广义能量}$ E=\sum_{\beta=1}^s p_{\beta}\dot{q_{\beta}} - \lagr(\vb*{q},\dot{\vb*{q}},t) $, 得\textbf{广义能量定理}
+\begin{equation}
+    \dot{E}=-\pdv{\lagr}{t}
+\end{equation}
+在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义能量为$ \tilde{E}=E-\pdv*{f}{t} $, 因此广义能量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在时间内整体平移, 如果该体系时间在平移后的拉格朗日函数仍保持不变(即体系满足\textbf{时间平移不变性}或\textbf{时间均匀性}), 即$ \pdv*{\lagr}{t}=0 $, 则$ \dot{E}=0 $.
 
 类似地, 我们运用变分法来获得体系在哈密顿力学下的运动方程. 定义\textbf{哈密顿函数}$ \hami(\vb*{q},\vb*{p},t) $满足
 \begin{equation}
@@ -263,9 +221,154 @@
     -\pdv{\rho}{t} &= \grad{\rho} \cdot \vb*{v} + \rho \div{\vb*{v}} = \sum_{\beta=1}^s \bigg(\pdv{\rho}{q_{\beta}} \dot{q_{\beta}} + \pdv{\rho}{p_{\beta}} \dot{p_{\beta}} + \pdv{\dot{q_{\beta}}}{q_{\beta}} \rho + \pdv{\dot{p_{\beta}}}{p_{\beta}} \rho \bigg)\\
     &= \sum_{\beta=1}^s \bigg(\pdv{\rho}{q_{\beta}} \dot{q_{\beta}} + \pdv{\rho}{p_{\beta}} \dot{p_{\beta}} + \pdv{\hami}{q_{\beta}}{p_{\beta}} \rho - \pdv{\hami}{p_{\beta}}{q_{\beta}} \rho \bigg) = \sum_{\beta=1}^s \bigg(\pdv{\rho}{q_{\beta}} \dot{q_{\beta}} + \pdv{\rho}{p_{\beta}} \dot{p_{\beta}} \bigg) = \pb{\rho}{\hami}.
 \end{align*}
-因此, $ \dv*{\rho}{t} = \pdv*{\rho}{t}+ \div{(\rho \vb*{v})} = \pdv*{\rho}{t}+\pb{\rho}{\hami} = 0 $, 即\textbf{刘维尔方程}. 相空间的概率密度的行为类似不可压缩流体, 刘维尔方程也具有流体连续性方程的形式. 如果选取相空间中的相点$ (\vb*{q},\vb*{p}) $, 经过$ \dd{t} $后该相点抵达新的相点$ (\vb*{q}+\dd{\vb*{q}},\vb*{p}+\dd{\vb*{p}}) $并形成了一条相轨道, 现在我们沿该相轨道跟随相点移动, 并观察所处相点周围相体积元$ \dd{\varGamma} $内相点的数目随所处时间的变化, 可以发现所处相点周围体积元内相点数目总是恒定的, 即$ \rho(\vb*{q},\vb*{p},t)=\rho(\vb*{q}+\dd{\vb*{q}},\vb*{p}+\dd{\vb*{p}},t+\dd{t}) $.
+因此, 有\textbf{刘维尔方程}
+\begin{equation}
+    \dv{\rho}{t} = \pdv{\rho}{t}+ \div{(\rho \vb*{v})} = \pdv{\rho}{t}+\pb{\rho}{\hami} = 0.
+\end{equation}
+相空间的概率密度的行为类似不可压缩流体, 刘维尔方程也具有流体连续性方程的形式. 如果选取相空间中的相点$ (\vb*{q},\vb*{p}) $, 经过$ \dd{t} $后该相点抵达新的相点$ (\vb*{q}+\dd{\vb*{q}},\vb*{p}+\dd{\vb*{p}}) $并形成了一条相轨道, 现在我们沿该相轨道跟随相点移动, 并观察所处相点周围相体积元$ \dd{\varGamma} $内相点的数目随所处时间的变化, 可以发现所处相点周围体积元内相点数目总是恒定的, 即$ \rho(\vb*{q},\vb*{p},t)=\rho(\vb*{q}+\dd{\vb*{q}},\vb*{p}+\dd{\vb*{p}},t+\dd{t}) $.
 
+我们考虑狭义相对论时空观下的自由粒子的力学量和运动方程. 自由粒子的哈密顿作用量应与参考系的选择无关, 因此它在洛伦兹变换下是保持不变的. 当我们将最小作用量原理和作用量的洛伦兹不变性等基本原理相结合, 可以唯一确定自由粒子的哈密顿作用量为
+\begin{equation*}
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s}.
+\end{equation*}
+其中, $ c $是光速, $ m $是粒子的一种内秉性质(称为\textbf{质量}), $ \dd{s} = c \dd{\tau} = c\dd{t} \sqrt{1-\vb*{v}^2/c^2} = c \dd{t}/\gamma $是粒子运动的不变间隔, $ \dd{\tau} $是固有时间间隔, $ \vb*{v} = \dv*{\vb*{x}}{t} $是粒子的广义速度. 因此, 粒子的拉格朗日函数, 广义动量, 广义能量分别为
+\begin{equation*}
+    \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}}, \quad \vb*{p} = \pdv{\lagr}{\vb*{v}} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = \frac{E \vb*{v}}{c^2}, \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} = c \sqrt{\vb*{p}^2 + m^2 c^2}.
+\end{equation*}
+此外, 有质能方程
+\begin{equation}
+    E^2 = \vb*{p}^2 c^2 + m^2 c^4,
+\end{equation}
+静止的自由粒子也具有\textbf{静止质量}$ mc^2 $, 质量不为零的自由粒子不可能以光速运动. 粒子的运动方程为
+\begin{equation}
+    \dv{\vb*{p}}{t}=0.
+\end{equation}
+在非相对论极限下, 粒子的拉格朗日函数, 广义动量, 广义能量, 运动方程分别为
+\begin{equation*}
+    \lagr = E = \frac{1}{2} m\vb*{v}^2, \quad \vb*{p} = m \vb*{v}, \quad \dv{(m\vb*{v})}{t}=0.
+\end{equation*}
+我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ x^{\mu} $为四维坐标. 采用变分法, 我们有
+\begin{equation*}
+    \var{\action} = -mc \int_a^b \var{\sqrt{\dd{x^{\mu}} \dd{x_{\mu}}}} = -mc \int_a^b \frac{\dd{x^{\mu}} \dd{\var{x_{\mu}}}}{\dd{s}} = \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_a^b + mc \int_a^b \dd{s} \var{x_{\mu}} \dv{s} \dv{x^{\mu}}{s} = 0.
+\end{equation*}
+由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
+\begin{equation}
+    \dv[2]{x^{\mu}}{s} = 0.
+\end{equation}
+我们称$ v^{\mu}=\dv*{x^{\mu}}{s}=(\gamma,\gamma \vb*{v}/c) $为粒子的\textbf{四维速度}, $ a^{\mu}=\dv*{v^{\mu}}{s}=(\gamma^4 (\vb*{v} \vdot \vb*{a})/c^2,\gamma^2\vb*{a}/c + \gamma^4 (\vb*{v} \vdot \vb*{a}) \vb*{v}/c^3) $为粒子的\textbf{四维加速度}, 称$ p^{\mu} = mcv^{\mu}= (\gamma mc, \gamma m \vb*{v}) = (E/c,\vb*{p}) $为粒子的\textbf{四维动量}, 称$ f^{\mu}=\dv*{p^{\mu}}{s}=mc\dv*{v^{\mu}}{s}=(\gamma (\vb*{f} \vdot \vb*{v})/c^2,\gamma\vb*{f}/c) $为粒子的\textbf{四维力}. 其中, $ \vb*{a}=\dv*{\vb*{v}}{t} $是广义加速度, $ \vb*{f}=\dv*{\vb*{p}}{t} $是广义力. 由于四维速度, 四维加速度, 四维动量, 四维力都是四矢量, 它们在洛伦兹变换下的变换规则与四维坐标的变换规则一致. 注意, $ v_{\mu} v^{\mu}=1 $, $ a_{\mu} v^{\mu}=0 $, $ f_{\mu} v^{\mu} = 0 $恒成立. 此外, 静止质量为$ m $的粒子的四维动量$ p^{\mu} $和其自身的内积为$ p^{\mu} p_{\mu} = (E/c)^2 - \vb*{p}^2 = m^2 c^2 $. 由多个粒子组成的体系的哈密顿作用量$ \action $为
+\begin{equation*}
+    \action = \sum_i -m_i c \int_a^b \dd{s}.
+\end{equation*}
 
+我们考虑狭义相对论时空观下的粒子与洛伦兹标量外场间存在相互作用时的力学量和运动方程. 与标量外场间存在相互作用的粒子的哈密顿作用量为, 拉格朗日函数, 运动方程分别为
+\begin{equation*}
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}.
+\end{equation*}
+其中, $ \varPhi(\vb*{x}) $是标量外场, 当$ \varPhi(\vb*{x}) $恒为零时即为自由粒子情形. 粒子的拉格朗日函数, 广义动量, 广义能量分别为
+\begin{equation*}
+    \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)}, \quad \vb*{p} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} \enum^{\varPhi(\vb*{x},t)}, \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} \enum^{\varPhi(\vb*{x},t)}.
+\end{equation*}
+粒子的运动方程为
+\begin{equation}
+    \dv{\vb*{p}}{t} = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} \enum^{\varPhi(\vb*{x},t)} \pdv{\varPhi(\vb*{x},t)}{t}.
+\end{equation}
+在非相对论极限下, 令$ V(\vb*{x},t) $是粒子与标量外场的相互作用能(称为\textbf{势能}), 标量外场$ \varPhi(\vb*{x},t)=V(\vb*{x},t)/mc^2 $, 此时粒子的拉格朗日函数, 广义动量, 广义能量, 运动方程分别为
+\begin{equation*}
+    \lagr = \frac{1}{2} m\vb*{v}^2 - V(\vb*{x},t), \quad \vb*{p} = m \vb*{v} , \quad E = \frac{1}{2} m\vb*{v}^2 + V(\vb*{x},t),\quad \dv{(m\vb*{v})}{t} = -\pdv{V(\vb*{x},t)}{\vb*{x}}.
+\end{equation*}
+由多个粒子组成的体系的哈密顿作用量$ \action $为
+\begin{equation*}
+    \action = \sum_i -m_i c \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}.
+\end{equation*}
+
+我们考虑狭义相对论时空观下的粒子与洛伦兹矢量外场间存在相互作用时的力学量和运动方程. 矢量外场常用四维势和四维流进行描述, 我们称$ A^{\mu}=(\varPhi,\vb*{A}) $是矢量外场的\textbf{四维势}, 称$ J^{\mu} = \rho \dv*{x^{\mu}}{t} =(c\rho,\vb*{j}) $为矢量外场的\textbf{四维流}, 称$ \varPhi $为$ A^{\mu} $的\textbf{标量势}, 称$ \vb*{A} $为$ A^{\mu} $的\textbf{矢量势}, 称$ \rho=\sum_a e_a \deltafunc{(\vb*{r}-\vb*{r}_a)} $为$ J^{\mu} $的\textbf{荷密度}, 称$ \vb*{j} = \rho \vb*{v} $为$ J^{\mu} $的\textbf{流密度}, 称$ e_a $为处于外场$ a $处的粒子与矢量外场的耦合强度, 称$ \vb*{r_a} $为处于外场$ a $处的粒子的径矢, 并将$ \vb*{E} = -\grad{\varPhi}-\frac{1}{c}\pdv{\vb*{A}}{t} $和$ \vb*{B} = \curl{\vb*{A}} $视作一种场强. 注意, 标量势$ \varPhi $和矢量势$ \vb*{A} $的定义并不是唯一的, 可以存在两套不同的四维势$ A^{\mu},A^{\mu\prime} $对应相同的$ \vb*{E} $和$ \vb*{B} $ (即矢量外场的规范对称性). 荷密度$ \rho $和流密度$ \vb*{j} $之间有\textbf{连续性方程}
+\begin{equation}
+    \partial_{\mu} J^{\mu} = 0, \quad \dv{\rho}{t} + \div{\vb*{j}}=0, \quad \pdv{t} \int_V \rho \dd{V} = - \oint_S \vb*{j} \vdot \dd{\vb*{S}}.
+\end{equation}
+其中, $ \dd{\vb*{S}} $是包围体积元$ \dd{V} $的曲面的有向面元, $ \dd{\vb*{S}} $指向曲面的外法线方向. 与矢量外场间存在相互作用的粒子的哈密顿作用量为
+\begin{equation*}
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} = - \int_a^b \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}.
+\end{equation*}
+其中, $ e $是粒子与矢量外场的耦合强度, $ A_{\mu} (\vb*{x}) $是四维势. 粒子的拉格朗日函数, 广义动量, 广义能量分别为
+\begin{equation*}
+    \lagr = -mc^2 \sqrt{1-\frac{\vb*{v}^2}{c^2}} + \frac{e}{c} (\vb*{v} \vdot \vb*{A}(\vb*{x})) - e \varPhi(\vb*{x}), \quad \vb*{p} = \pdv{\lagr}{\vb*{v}} = \frac{m\vb*{v}}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} + \frac{e}{c} \vb*{A}(\vb*{x}), \quad E = \vb*{p} \vdot \vb*{v} - \lagr = \frac{mc^2}{\sqrt{1-\frac{\vb*{v}^2}{c^2}}} + e \varPhi(\vb*{x}).
+\end{equation*}
+粒子的运动方程为
+\begin{equation}
+    \dv{\vb*{p}}{t} = e \bigg( \vb*{E} + \frac{\vb*{v}}{c} \cross \vb*{B} \bigg).
+\end{equation}
+电磁场通常被认为是一个洛伦兹矢量场, 与电磁场间存在相互作用的带电粒子是前述与矢量外场间存在相互作用的粒子的特例, 此时耦合强度$ e $是粒子的一种内秉性质(称为\textbf{电荷}), $ \vb*{E} $称为\textbf{电场强度}, $ \vb*{B} $称为\textbf{磁感应强度}, $ \rho $称为\textbf{电荷密度}, $ \vb*{j} $称为\textbf{电流密度}, 连续性方程即为\textbf{电荷守恒定律}. 在非相对论极限下, 粒子的拉格朗日函数, 广义动量, 广义能量, 运动方程分别为
+\begin{equation*}
+    \lagr = \frac{1}{2} m\vb*{v}^2 + \frac{e}{c} (\vb*{v} \vdot \vb*{A}(\vb*{x},t)) - e \varPhi(\vb*{x},t), \quad \vb*{p} = m \vb*{v} + \frac{e}{c} \vb*{A}(\vb*{x},t), \quad E = \frac{1}{2} m\vb*{v}^2 + e \varPhi(\vb*{x},t), \quad \dv{\vb*{p}}{t} = e \bigg( \vb*{E} + \frac{\vb*{v}}{c} \cross \vb*{B} \bigg).
+\end{equation*}
+令$ F_{\mu\nu}=\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} $是四维势$ A_{\mu} (\vb*{x}) $的场强的二阶反对称张量, $ \tilde{F}^{\mu\nu} = 0.5 \epsilon^{\mu\nu\rho\sigma} F_{\rho\sigma} $是场强张量$ F_{\mu\nu} $的Hodge对偶. 具体地,
+\begin{equation*}
+    F_{\mu\nu} = \mqty( 0 & -E_1 & -E_2 & -E_3 \\ E_1 & 0 & -B_3 & B_2 \\ E_2 & B_3 & 0 & -B_1 \\ E_3 & -B_2 & B_1 & 0 ), \quad \tilde{F}_{\mu\nu} = \mqty( 0 & -B_1 & -B_2 & -B_3 \\ B_1 & 0 & E_3 & -E_2 \\ B_2 & -E_3 & 0 & E_1 \\ B_3 & E_2 & -E_1 & 0 ).
+\end{equation*}
+注意, 影响粒子的力学量和运动方程的不是四维势$ A_{\mu} $本身, 而是其派生出的场强张量$ F_{\mu\nu} $. 事实上, 四维势$ A_{\mu} $经\textbf{规范变换}$ \tilde{A}_{\mu}(\vb*{x}) = A_{\mu}(\vb*{x}) + \partial_{\mu} \varPhi(\vb*{x}) $后哈密顿作用量变为
+\begin{equation*}
+    \tilde{\action} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} - \frac{e}{c} \int_a^b \pdv{\varPhi(\vb*{x})}{x^{\mu}} \dd{x^{\mu}} = \action - \frac{e}{c} (\varPhi(\vb*{x}_b) - \varPhi(\vb*{x}_a)),
+\end{equation*}
+其中$ \varPhi(\vb*{x}) $是任意标量场. 由于$ \var{\tilde{\action}} = \var{\action} $, 粒子的力学量和运动方程在矢量外场的四维势的规范变换下保持不变, 因此矢量外场存在\textbf{规范对称性}. 场强张量在洛伦兹变换下的变换规则为$ F'_{\mu'\nu'} = \varLambda_{\mu'}{}^{\mu} \varLambda_{\nu'}{}^{\nu} F_{\mu\nu} $. 对于仅含推动而不含三维空间转动的洛伦兹变换, 可以进一步给出$ \vb*{E} $和$ \vb*{B} $在洛伦兹变换下的变换规则为
+\begin{equation*}
+    \vb*{E}' = \gamma (\vb*{E} + \vb*{\beta} \cross \vb*{B}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{E}) \vb*{\beta}, \quad \vb*{B}' = \gamma (\vb*{B} + \vb*{\beta} \cross \vb*{E}) - \frac{\gamma^2}{1+\gamma} (\vb*{\beta} \vdot \vb*{B}) \vb*{\beta}.
+\end{equation*}
+由$ F^{\mu\nu} $和$ \tilde{F}^{\mu\nu} $可以构造出两类洛伦兹不变量, 分别为
+\begin{equation*}
+    F^{\mu\nu}F_{\mu\nu} = -\tilde{F}^{\mu\nu}\tilde{F}_{\mu\nu} = -2(\vb*{E}^2-\vb*{B}^2), \quad \tilde{F}^{\mu\nu}F_{\mu\nu} = -4 \vb*{E} \vdot \vb*{B}.
+\end{equation*}
+因此, 我们可以得出
+\begin{itemize}
+    \item 如果$ \vb*{E} $和$ \vb*{B} $在某个惯性系中是垂直的, 则它们在任意惯性系中都是垂直的.
+    \item 如果在某个惯性系中仅存在电场(或磁场), 则在任意惯性系中电场(或磁场)不为零.
+    \item 如果$ \abs{\vb*{E}} > \abs{\vb*{B}} $在某个惯性系中成立, 则在任意惯性系中都成立, 反之亦然.
+\end{itemize}
+我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ x^{\mu} $为四维坐标. 假设场是已知的, 只变分粒子的四维坐标, 我们有
+\begin{align*}
+    \var{\action} &= - \var{\int_a^b \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}}
+    = -\int_a^b \bigg(mc v_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} A_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}}\bigg) \\
+    &= \int_a^b \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \var{x^{\mu}} \dd{A_{\mu}} - \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
+    &= \int_a^b \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\mu}} \dd{x^{\nu}} - \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\nu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
+    &= \int_a^b \bigg(mc \dv{x^{\mu}}{s} + \frac{e}{c} \bigg(\pdv{A_{\mu}}{x^{\nu}} - \pdv{A_{\nu}}{x^{\mu}}\bigg) v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
+    &= \int_a^b \bigg(mc \dv{x^{\mu}}{s} - \frac{e}{c} F_{\mu\nu} v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b.
+\end{align*}
+由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{(mcv_{\mu} + \frac{e}{c}A_{\mu}) \var{x^{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x^{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
+\begin{equation}
+    mc \dv{x_{\mu}}{s} = \frac{e}{c} F_{\mu\nu} \dv{x^{\nu}}{s} = \frac{e}{c} \smdet{\partial_{\mu} & \partial_{\nu} \\ A_{\mu} & A_{\nu}} \dv{x^{\nu}}{s}.
+\end{equation}
+由Bianchi恒等式
+\begin{equation*}
+    \partial_{\mu} \tilde{F}^{\mu\nu} = \partial_{\mu}F_{\nu\rho} + \partial_{\nu}F_{\rho\mu} + \partial_{\rho}F_{\mu\nu} = 0,
+\end{equation*}
+我们可以得到形式上的\textbf{法拉第电磁感应定律}和\textbf{磁高斯定理}
+\begin{equation}
+    \curl{\vb*{E}} = - \pdv{\vb*{B}}{t}, \quad \div{\vb*{B}} = 0.
+\end{equation}
+矢量外场和场内多个粒子组成的体系的哈密顿作用量$ \action $应当包含三个部分, 分别为描述自由粒子的运动的哈密顿作用量$ \action_{\mathrm{m}} $, 描述粒子与场的相互作用的哈密顿作用量$ \action_{\mathrm{mf}} $, 描述场的运动的哈密顿作用量$ \action_{\mathrm{f}} $, 即
+\begin{align*}
+    \action &= \action_{\mathrm{m}} + \action_{\mathrm{mf}} + \action_{\mathrm{f}} = - \sum_i m_i c \int_a^b \dd{s} - \sum_i \frac{e_i}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
+    &= - \sum_i m_i c \int_a^b \dd{s} - \frac{1}{c} \int_a^b \rho A_{\mu} (\vb*{x}) \dd{x^{\mu}} \dd{V} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
+    &= - \sum_i m_i c \int_a^b \dd{s} -\frac{1}{c^2} \int_a^b A_{\mu} J^{\mu} \dd[4]{x} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
+\end{align*}
+其中, $ d $的数值与场的测量单位有关, 在高斯单位制下$ d = -1/16 \pi $. 现在考虑矢量外场的力学量和运动方程, 矢量外场的哈密顿作用量为
+\begin{equation*}
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -\frac{1}{c^2} \int_a^b A_{\mu} J^{\mu} \dd[4]{x} + \frac{1}{16 \pi c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
+\end{equation*}
+假设场内粒子的运动是已知的, 只变分场的四维势, 我们有
+\begin{align*}
+    \var{\action} &= -\frac{1}{c} \var{\int_a^b \bigg(\frac{1}{c} A_{\mu} J^{\mu} + \frac{1}{16 \pi} F_{\mu\nu} F^{\mu\nu} \bigg) \dd[4]{x}}
+    = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{16 \pi} \var{\big(F_{\mu\nu} F^{\mu\nu}\big)} \bigg) \dd[4]{x} \\
+    &= -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \var{F_{\mu\nu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \partial_{\mu} \var{A_{\nu}} - \frac{1}{8 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x}\\
+    &= -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} - \frac{1}{4 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu} + \frac{1}{4 \pi} \pdv{F^{\mu\nu}}{x^{\nu}} \bigg) \var{A_{\mu}} \dd[4]{x} +\eval{\frac{\int_a^b F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}{4\pi c}}_a^b.
+\end{align*}
+由于$ \var{A_{\mu}(a)}=\var{A_{\mu}(b)}=0 $, 得$ \eval{\frac{1}{4\pi c} \int_a^b F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{A^{\mu}} $的任意性, 得场的运动方程的四维协变形式
+\begin{equation}
+    \partial_{\nu} F^{\mu\nu} = -\frac{4\pi}{c} J^{\mu}.
+\end{equation}
+因此, 我们可以得到形式上的\textbf{高斯定理}和\textbf{安培环路定理}
+\begin{equation}
+    \div{\vb*{E}} = 4\pi\rho, \quad \curl{\vb*{B}} = \frac{4\pi}{c} \vb*{J} + \frac{1}{c} \pdv{\vb*{E}}{t}.
+\end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section[量子力学]{量子力学}\label{量子力学}
