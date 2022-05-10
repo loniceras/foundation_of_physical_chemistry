@@ -53,7 +53,7 @@
     &=\int_{t_{\init}}^{t_{\fini}} \sum_{\beta=1}^s\bigg(\pdv{\lagr}{q_{\beta}}\var{q_{\beta}} + \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}} \var{q_{\beta}}) - \var{q_{\beta}} \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}})\bigg) \dd{t}\\
     &=\eval{\sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}+\int_{t_{\init}}^{t_{\fini}} \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}})\bigg) \var{q_{\beta}} \dd{t}.
 \end{align*}
-注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{欧拉}--\textbf{拉格朗日方程}:
+注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}}\var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},t_{\init};\vb*{q}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{欧拉}--\textbf{拉格朗日方程}
 \begin{equation}
     \pdv{\lagr}{q_{\alpha}} - \dv{t}(\pdv{\lagr}{\dot{q_{\alpha}}}) = 0.
 \end{equation}
@@ -63,7 +63,7 @@
 \begin{equation}
     \forall \alpha \in \{1,2,\ldots,s\}, \quad\dot{p_{\alpha}}=\pdv{\lagr}{q_{\alpha}}=F_{\alpha}.
 \end{equation}
-在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义动量为$ \tilde{p}_{\alpha}=p_{\alpha}+\pdv*{f}{q_{\alpha}} $, 因此广义动量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在空间内整体平移相同的位移, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} \vb*{e} $. 如果该体系的所有质点在空间内整体平移后的拉格朗日函数仍保持不变(即体系满足\textbf{空间平移不变性}或\textbf{空间均匀性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 考虑力学体系的所有质点在空间内整体旋转相同的角度, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} \times \vb*{r}_i $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} (\vb*{e} \times \vb*{r}_i) $. 如果该体系的所有质点在空间内整体旋转后的拉格朗日函数仍保持不变(即体系满足\textbf{空间转动不变性}或\textbf{空间各向同性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 现在我们考虑$ \lagr(\vb*{q},\dot{\vb*{q}},t) $对时间的导数
+在定域规范变换$ \tilde{\lagr}(\vb*{q},\dot{\vb*{q}},t)=\lagr(\vb*{q},\dot{\vb*{q}},t)+\dv*{f(\vb*{q},t)}{t} $下, 广义动量为$ \tilde{p}_{\alpha}=p_{\alpha}+\pdv*{f}{q_{\alpha}} $, 因此广义动量也具有规范不定性, 其值取决于拉格朗日函数的规范选择. 考虑力学体系的所有质点在空间内整体平移相同的位移, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} \vb*{e} $. 如果该体系的所有质点在空间内整体平移后的拉格朗日函数仍保持不变(即体系满足\textbf{空间平移不变性}或\textbf{空间均匀性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 考虑力学体系的所有质点在空间内整体旋转相同的角度, 不妨对任意$ i \in \{1,2,\ldots,n\} $都有$ \pdv*{\vb*{r}_i}{q_{\alpha}}=\vb*{r}_i \cross \vb*{e} $且$ \var{\vb*{r}_i} = \sum_{\beta=1}^s \pdv{\vb*{r}_i}{q_{\beta}} \var{q_{\beta}} = \var{q_{\alpha}} (\vb*{r}_i \cross \vb*{e}) $. 如果该体系的所有质点在空间内整体旋转后的拉格朗日函数仍保持不变(即体系满足\textbf{空间转动不变性}或\textbf{空间各向同性}), 即$ \pdv*{\lagr}{q_{\alpha}}=0 $, 则$ \dot{p_{\alpha}}=0 $. 现在我们考虑$ \lagr(\vb*{q},\dot{\vb*{q}},t) $对时间的导数
 \begin{align*}
     \dv{\lagr}{t} &= \sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \pdv{\lagr}{\dot{q_{\beta}}} \ddot{q_{\beta}} \bigg) + \pdv{\lagr}{t} = \sum_{\beta=1}^s \pdv{\lagr}{q_{\beta}}\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} - \sum_{\beta=1}^s \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \dot{q_{\beta}} + \pdv{\lagr}{t} \\
     &=\sum_{\beta=1}^s \bigg(\pdv{\lagr}{q_{\beta}} - \dv{t}(\pdv{\lagr}{\dot{q_{\beta}}}) \bigg)\dot{q_{\beta}} + \dv{t} \sum_{\beta=1}^s \pdv{\lagr}{\dot{q_{\beta}}} \dot{q_{\beta}} + \pdv{\lagr}{t} = \dv{t} \sum_{\beta=1}^s p_{\beta} \dot{q_{\beta}} + \pdv{\lagr}{t}.
@@ -84,7 +84,7 @@
     &=\int_{t_{\init}}^{t_{\fini}} \bigg(\dv{t} \sum_{\beta=1}^s p_{\beta} \var{q_{\beta}} +\sum_{\beta=1}^s \bigg(\dot{q_{\beta}} \var{p_{\beta}} - \dot{p_{\beta}} \var{q_{\beta}} - \pdv{\hami}{q_{\beta}}\var{q_{\beta}} - \pdv{\hami}{p_{\beta}}\var{p_{\beta}} \bigg)\bigg) \dd{t}\\
     &=\eval{\sum_{\beta=1}^s p_{\beta} \var{q_{\beta}}}_{t_{\init}}^{t_{\fini}} + \int_{t_{\init}}^{t_{\fini}} \bigg(\sum_{\beta=1}^s \bigg(\dot{q_{\beta}} - \pdv{\hami}{p_{\beta}} \bigg)\var{p_{\beta}} - \sum_{\beta=1}^s \bigg(\dot{p_{\beta}} + \pdv{\hami}{q_{\beta}} \bigg)\var{q_{\beta}} \bigg) \dd{t}.
 \end{align*}
-注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s p_{\beta} \var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $和$ \var{p_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{哈密顿方程}:
+注意, 对等时变分有$ \var{\dot{q_{\alpha}}} = \dv{t} \var{q_{\alpha}} $. 由于$ \var{\vb*{q}(t_{\init})}=\var{\vb*{q}(t_{\fini})}=0 $, 得$ \eval{\sum_{\beta=1}^s p_{\beta} \var{q_{\beta}}}_{t_{\init}}^{t_{\fini}}=0 $. 为了使$ \action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini}) $取极小值, $ \var{\action(\vb*{q}_{\init},\vb*{p}_{\init},t_{\init};\vb*{q}_{\fini},\vb*{p}_{\fini},t_{\fini})}=0 $. 由于$ \var{q_{\beta}} $和$ \var{p_{\beta}} $的任意性, 得对任意$ \alpha \in \{1,2,\ldots,s\} $有\textbf{哈密顿方程}
 \begin{equation}
     \pdv{\hami}{p_{\alpha}} = \dot{q_{\alpha}}, \quad \pdv{\hami}{q_{\alpha}} = -\dot{p_{\alpha}}.
 \end{equation}
@@ -229,7 +229,7 @@
 
 我们考虑狭义相对论时空观下的自由粒子的力学量和运动方程. 自由粒子的哈密顿作用量应与参考系的选择无关, 因此它在洛伦兹变换下是保持不变的. 当我们将最小作用量原理和作用量的洛伦兹不变性等基本原理相结合, 可以唯一确定自由粒子的哈密顿作用量为
 \begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s}.
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_{\init}^{\fini} \dd{s}.
 \end{equation*}
 其中, $ c $是光速, $ m $是粒子的一种内秉性质(称为\textbf{质量}), $ \dd{s} = c \dd{\tau} = c\dd{t} \sqrt{1-\vb*{v}^2/c^2} = c \dd{t}/\gamma $是粒子运动的不变间隔, $ \dd{\tau} $是固有时间间隔, $ \vb*{v} = \dv*{\vb*{x}}{t} $是粒子的广义速度. 因此, 粒子的拉格朗日函数, 广义动量, 广义能量分别为
 \begin{equation*}
@@ -249,20 +249,20 @@
 \end{equation*}
 我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ x^{\mu} $为四维坐标. 采用变分法, 我们有
 \begin{equation*}
-    \var{\action} = -mc \int_a^b \var{\sqrt{\dd{x^{\mu}} \dd{x_{\mu}}}} = -mc \int_a^b \frac{\dd{x^{\mu}} \dd{\var{x_{\mu}}}}{\dd{s}} = \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_a^b + mc \int_a^b \dd{s} \var{x_{\mu}} \dv{s} \dv{x^{\mu}}{s} = 0.
+    \var{\action} = -mc \int_{\init}^{\fini} \var{\sqrt{\dd{x^{\mu}} \dd{x_{\mu}}}} = -mc \int_{\init}^{\fini} \frac{\dd{x^{\mu}} \dd{\var{x_{\mu}}}}{\dd{s}} = \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_{\init}^{\fini} + mc \int_{\init}^{\fini} \dd{s} \var{x_{\mu}} \dv{s} \dv{x^{\mu}}{s}.
 \end{equation*}
-由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
+由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{-mc \dv{x^{\mu}}{s} \var{x_{\mu}}}_{\init}^{\fini}=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x_{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
 \begin{equation}
     \dv[2]{x^{\mu}}{s} = 0.
 \end{equation}
 我们称$ v^{\mu}=\dv*{x^{\mu}}{s}=(\gamma,\gamma \vb*{v}/c) $为粒子的\textbf{四维速度}, $ a^{\mu}=\dv*{v^{\mu}}{s}=(\gamma^4 (\vb*{v} \vdot \vb*{a})/c^2,\gamma^2\vb*{a}/c + \gamma^4 (\vb*{v} \vdot \vb*{a}) \vb*{v}/c^3) $为粒子的\textbf{四维加速度}, 称$ p^{\mu} = mcv^{\mu}= (\gamma mc, \gamma m \vb*{v}) = (E/c,\vb*{p}) $为粒子的\textbf{四维动量}, 称$ f^{\mu}=\dv*{p^{\mu}}{s}=mc\dv*{v^{\mu}}{s}=(\gamma (\vb*{f} \vdot \vb*{v})/c^2,\gamma\vb*{f}/c) $为粒子的\textbf{四维力}. 其中, $ \vb*{a}=\dv*{\vb*{v}}{t} $是广义加速度, $ \vb*{f}=\dv*{\vb*{p}}{t} $是广义力. 由于四维速度, 四维加速度, 四维动量, 四维力都是四矢量, 它们在洛伦兹变换下的变换规则与四维坐标的变换规则一致. 注意, $ v_{\mu} v^{\mu}=1 $, $ a_{\mu} v^{\mu}=0 $, $ f_{\mu} v^{\mu} = 0 $恒成立. 此外, 静止质量为$ m $的粒子的四维动量$ p^{\mu} $和其自身的内积为$ p^{\mu} p_{\mu} = (E/c)^2 - \vb*{p}^2 = m^2 c^2 $. 由多个粒子组成的体系的哈密顿作用量$ \action $为
 \begin{equation*}
-    \action = \sum_i -m_i c \int_a^b \dd{s}.
+    \action = \sum_i -m_i c \int_{\init}^{\fini} \dd{s}.
 \end{equation*}
 
 我们考虑狭义相对论时空观下的粒子与洛伦兹标量外场间存在相互作用时的力学量和运动方程. 与标量外场间存在相互作用的粒子的哈密顿作用量为, 拉格朗日函数, 运动方程分别为
 \begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}.
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_{\init}^{\fini} \dd{s} \enum^{\varPhi(\vb*{x})}.
 \end{equation*}
 其中, $ \varPhi(\vb*{x}) $是标量外场, 当$ \varPhi(\vb*{x}) $恒为零时即为自由粒子情形. 粒子的拉格朗日函数, 广义动量, 广义能量分别为
 \begin{equation*}
@@ -278,7 +278,7 @@
 \end{equation*}
 由多个粒子组成的体系的哈密顿作用量$ \action $为
 \begin{equation*}
-    \action = \sum_i -m_i c \int_a^b \dd{s} \enum^{\varPhi(\vb*{x})}.
+    \action = \sum_i -m_i c \int_{\init}^{\fini} \dd{s} \enum^{\varPhi(\vb*{x})}.
 \end{equation*}
 
 我们考虑狭义相对论时空观下的粒子与洛伦兹矢量外场间存在相互作用时的力学量和运动方程. 矢量外场常用四维势和四维流进行描述, 我们称$ A^{\mu}=(\varPhi,\vb*{A}) $是矢量外场的\textbf{四维势}, 称$ J^{\mu} = \rho \dv*{x^{\mu}}{t} =(c\rho,\vb*{j}) $为矢量外场的\textbf{四维流}, 称$ \varPhi $为$ A^{\mu} $的\textbf{标量势}, 称$ \vb*{A} $为$ A^{\mu} $的\textbf{矢量势}, 称$ \rho=\sum_a e_a \deltafunc{(\vb*{r}-\vb*{r}_a)} $为$ J^{\mu} $的\textbf{荷密度}, 称$ \vb*{j} = \rho \vb*{v} $为$ J^{\mu} $的\textbf{流密度}, 称$ e_a $为处于外场$ a $处的粒子与矢量外场的耦合强度, 称$ \vb*{r_a} $为处于外场$ a $处的粒子的径矢, 并将$ \vb*{E} = -\grad{\varPhi}-\frac{1}{c}\pdv{\vb*{A}}{t} $和$ \vb*{B} = \curl{\vb*{A}} $视作一种场强. 注意, 标量势$ \varPhi $和矢量势$ \vb*{A} $的定义并不是唯一的, 可以存在两套不同的四维势$ A^{\mu},A^{\mu\prime} $对应相同的$ \vb*{E} $和$ \vb*{B} $ (即矢量外场的规范对称性). 荷密度$ \rho $和流密度$ \vb*{j} $之间有\textbf{连续性方程}
@@ -287,7 +287,7 @@
 \end{equation}
 其中, $ \dd{\vb*{S}} $是包围体积元$ \dd{V} $的曲面的有向面元, $ \dd{\vb*{S}} $指向曲面的外法线方向. 与矢量外场间存在相互作用的粒子的哈密顿作用量为
 \begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} = - \int_a^b \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}.
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -mc \int_{\init}^{\fini} \dd{s} - \frac{e}{c} \int_{\init}^{\fini} A_{\mu} (\vb*{x}) \dd{x^{\mu}} = - \int_{\init}^{\fini} \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}.
 \end{equation*}
 其中, $ e $是粒子与矢量外场的耦合强度, $ A_{\mu} (\vb*{x}) $是四维势. 粒子的拉格朗日函数, 广义动量, 广义能量分别为
 \begin{equation*}
@@ -307,7 +307,7 @@
 \end{equation*}
 注意, 影响粒子的力学量和运动方程的不是四维势$ A_{\mu} $本身, 而是其派生出的场强张量$ F_{\mu\nu} $. 事实上, 四维势$ A_{\mu} $经\textbf{规范变换}$ \tilde{A}_{\mu}(\vb*{x}) = A_{\mu}(\vb*{x}) + \partial_{\mu} \varPhi(\vb*{x}) $后哈密顿作用量变为
 \begin{equation*}
-    \tilde{\action} = -mc \int_a^b \dd{s} - \frac{e}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} - \frac{e}{c} \int_a^b \pdv{\varPhi(\vb*{x})}{x^{\mu}} \dd{x^{\mu}} = \action - \frac{e}{c} (\varPhi(\vb*{x}_b) - \varPhi(\vb*{x}_a)),
+    \tilde{\action} = -mc \int_{\init}^{\fini} \dd{s} - \frac{e}{c} \int_{\init}^{\fini} A_{\mu} (\vb*{x}) \dd{x^{\mu}} - \frac{e}{c} \int_{\init}^{\fini} \pdv{\varPhi(\vb*{x})}{x^{\mu}} \dd{x^{\mu}} = \action - \frac{e}{c} (\varPhi(\vb*{x}_b) - \varPhi(\vb*{x}_a)),
 \end{equation*}
 其中$ \varPhi(\vb*{x}) $是任意标量场. 由于$ \var{\tilde{\action}} = \var{\action} $, 粒子的力学量和运动方程在矢量外场的四维势的规范变换下保持不变, 因此矢量外场存在\textbf{规范对称性}. 场强张量在洛伦兹变换下的变换规则为$ F'_{\mu'\nu'} = \varLambda_{\mu'}{}^{\mu} \varLambda_{\nu'}{}^{\nu} F_{\mu\nu} $. 对于仅含推动而不含三维空间转动的洛伦兹变换, 可以进一步给出$ \vb*{E} $和$ \vb*{B} $在洛伦兹变换下的变换规则为
 \begin{equation*}
@@ -325,14 +325,14 @@
 \end{itemize}
 我们也可以采用四维坐标的协变形式表示自由粒子的力学量和运动方程, 令$ x^{\mu} $为四维坐标. 假设场是已知的, 只变分粒子的四维坐标, 我们有
 \begin{align*}
-    \var{\action} &= - \var{\int_a^b \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}}
-    = -\int_a^b \bigg(mc v_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} A_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}}\bigg) \\
-    &= \int_a^b \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \var{x^{\mu}} \dd{A_{\mu}} - \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
-    &= \int_a^b \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\mu}} \dd{x^{\nu}} - \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\nu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
-    &= \int_a^b \bigg(mc \dv{x^{\mu}}{s} + \frac{e}{c} \bigg(\pdv{A_{\mu}}{x^{\nu}} - \pdv{A_{\nu}}{x^{\mu}}\bigg) v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b\\
-    &= \int_a^b \bigg(mc \dv{x^{\mu}}{s} - \frac{e}{c} F_{\mu\nu} v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_a^b.
+    \var{\action} &= - \var{\int_{\init}^{\fini} \bigg(mc + \frac{e}{c} v^{\mu} A_{\mu}\bigg) \dd{s}}
+    = -\int_{\init}^{\fini} \bigg(mc v_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} A_{\mu} \dd{\var{x^{\mu}}} + \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}}\bigg) \\
+    &= \int_{\init}^{\fini} \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \var{x^{\mu}} \dd{A_{\mu}} - \frac{e}{c} \var{A_{\mu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_{\init}^{\fini}\\
+    &= \int_{\init}^{\fini} \bigg(mc \dd{v_{\mu}} \var{x^{\mu}} + \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\mu}} \dd{x^{\nu}} - \frac{e}{c} \pdv{A_{\mu}}{x^{\nu}} \var{x^{\nu}} \dd{x^{\mu}} \bigg) - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_{\init}^{\fini}\\
+    &= \int_{\init}^{\fini} \bigg(mc \dv{x^{\mu}}{s} + \frac{e}{c} \bigg(\pdv{A_{\mu}}{x^{\nu}} - \pdv{A_{\nu}}{x^{\mu}}\bigg) v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_{\init}^{\fini}\\
+    &= \int_{\init}^{\fini} \bigg(mc \dv{x^{\mu}}{s} - \frac{e}{c} F_{\mu\nu} v^{\nu} \bigg) \var{x^{\mu}} \dd{s} - \eval{\bigg(mcv_{\mu} + \frac{e}{c}A_{\mu}\bigg) \var{x^{\mu}}}_{\init}^{\fini}.
 \end{align*}
-由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{(mcv_{\mu} + \frac{e}{c}A_{\mu}) \var{x^{\mu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x^{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
+由于$ \var{x_{\mu}(a)}=\var{x_{\mu}(b)}=0 $, 得$ \eval{(mcv_{\mu} + \frac{e}{c}A_{\mu}) \var{x^{\mu}}}_{\init}^{\fini}=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{x^{\mu}} $的任意性, 得粒子的运动方程的四维协变形式
 \begin{equation}
     mc \dv{x_{\mu}}{s} = \frac{e}{c} F_{\mu\nu} \dv{x^{\nu}}{s} = \frac{e}{c} \smdet{\partial_{\mu} & \partial_{\nu} \\ A_{\mu} & A_{\nu}} \dv{x^{\nu}}{s}.
 \end{equation}
@@ -346,22 +346,22 @@
 \end{equation}
 矢量外场和场内多个粒子组成的体系的哈密顿作用量$ \action $应当包含三个部分, 分别为描述自由粒子的运动的哈密顿作用量$ \action_{\mathrm{m}} $, 描述粒子与场的相互作用的哈密顿作用量$ \action_{\mathrm{mf}} $, 描述场的运动的哈密顿作用量$ \action_{\mathrm{f}} $, 即
 \begin{align*}
-    \action &= \action_{\mathrm{m}} + \action_{\mathrm{mf}} + \action_{\mathrm{f}} = - \sum_i m_i c \int_a^b \dd{s} - \sum_i \frac{e_i}{c} \int_a^b A_{\mu} (\vb*{x}) \dd{x^{\mu}} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
-    &= - \sum_i m_i c \int_a^b \dd{s} - \frac{1}{c} \int_a^b \rho A_{\mu} (\vb*{x}) \dd{x^{\mu}} \dd{V} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
-    &= - \sum_i m_i c \int_a^b \dd{s} -\frac{1}{c^2} \int_a^b A_{\mu} J^{\mu} \dd[4]{x} + \frac{d}{c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
+    \action &= \action_{\mathrm{m}} + \action_{\mathrm{mf}} + \action_{\mathrm{f}} = - \sum_i m_i c \int_{\init}^{\fini} \dd{s} - \sum_i \frac{e_i}{c} \int_{\init}^{\fini} A_{\mu} (\vb*{x}) \dd{x^{\mu}} + \frac{d}{c} \int_{\init}^{\fini} F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
+    &= - \sum_i m_i c \int_{\init}^{\fini} \dd{s} - \frac{1}{c} \int_{\init}^{\fini} \rho A_{\mu} (\vb*{x}) \dd{x^{\mu}} \dd{V} + \frac{d}{c} \int_{\init}^{\fini} F_{\mu\nu} F^{\mu\nu} \dd[4]{x}\\
+    &= - \sum_i m_i c \int_{\init}^{\fini} \dd{s} -\frac{1}{c^2} \int_{\init}^{\fini} A_{\mu} J^{\mu} \dd[4]{x} + \frac{d}{c} \int_{\init}^{\fini} F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
 \end{align*}
 其中, $ d $的数值与场的测量单位有关, 在高斯单位制下$ d = -1/16 \pi $. 现在考虑矢量外场的力学量和运动方程, 矢量外场的哈密顿作用量为
 \begin{equation*}
-    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -\frac{1}{c^2} \int_a^b A_{\mu} J^{\mu} \dd[4]{x} + \frac{1}{16 \pi c} \int_a^b F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = -\frac{1}{c^2} \int_{\init}^{\fini} A_{\mu} J^{\mu} \dd[4]{x} + \frac{1}{16 \pi c} \int_{\init}^{\fini} F_{\mu\nu} F^{\mu\nu} \dd[4]{x}.
 \end{equation*}
 假设场内粒子的运动是已知的, 只变分场的四维势, 我们有
 \begin{align*}
-    \var{\action} &= -\frac{1}{c} \var{\int_a^b \bigg(\frac{1}{c} A_{\mu} J^{\mu} + \frac{1}{16 \pi} F_{\mu\nu} F^{\mu\nu} \bigg) \dd[4]{x}}
-    = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{16 \pi} \var{\big(F_{\mu\nu} F^{\mu\nu}\big)} \bigg) \dd[4]{x} \\
-    &= -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \var{F_{\mu\nu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \partial_{\mu} \var{A_{\nu}} - \frac{1}{8 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x}\\
-    &= -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} - \frac{1}{4 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_a^b \bigg(\frac{1}{c} J^{\mu} + \frac{1}{4 \pi} \pdv{F^{\mu\nu}}{x^{\nu}} \bigg) \var{A_{\mu}} \dd[4]{x} +\eval{\frac{\int_a^b F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}{4\pi c}}_a^b.
+    \var{\action} &= -\frac{1}{c} \var{\int_{\init}^{\fini} \bigg(\frac{1}{c} A_{\mu} J^{\mu} + \frac{1}{16 \pi} F_{\mu\nu} F^{\mu\nu} \bigg) \dd[4]{x}}
+    = -\frac{1}{c} \int_{\init}^{\fini} \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{16 \pi} \var{\big(F_{\mu\nu} F^{\mu\nu}\big)} \bigg) \dd[4]{x} \\
+    &= -\frac{1}{c} \int_{\init}^{\fini} \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \var{F_{\mu\nu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_{\init}^{\fini} \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} + \frac{1}{8 \pi} F^{\mu\nu} \partial_{\mu} \var{A_{\nu}} - \frac{1}{8 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x}\\
+    &= -\frac{1}{c} \int_{\init}^{\fini} \bigg(\frac{1}{c} J^{\mu}\var{A_{\mu}} - \frac{1}{4 \pi} F^{\mu\nu} \partial_{\nu} \var{A_{\mu}} \bigg) \dd[4]{x} = -\frac{1}{c} \int_{\init}^{\fini} \bigg(\frac{1}{c} J^{\mu} + \frac{1}{4 \pi} \pdv{F^{\mu\nu}}{x^{\nu}} \bigg) \var{A_{\mu}} \dd[4]{x} +\eval{\frac{\int_{\init}^{\fini} F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}{4\pi c}}_{\init}^{\fini}.
 \end{align*}
-由于$ \var{A_{\mu}(a)}=\var{A_{\mu}(b)}=0 $, 得$ \eval{\frac{1}{4\pi c} \int_a^b F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}_a^b=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{A^{\mu}} $的任意性, 得场的运动方程的四维协变形式
+由于$ \var{A_{\mu}(a)}=\var{A_{\mu}(b)}=0 $, 得$ \eval{\frac{1}{4\pi c} \int_{\init}^{\fini} F^{\mu\nu} \var{A_{\mu}} \dd{S_{\nu}}}_{\init}^{\fini}=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{A^{\mu}} $的任意性, 得场的运动方程的四维协变形式
 \begin{equation}
     \partial_{\nu} F^{\mu\nu} = -\frac{4\pi}{c} J^{\mu}.
 \end{equation}
@@ -369,6 +369,53 @@
 \begin{equation}
     \div{\vb*{E}} = 4\pi\rho, \quad \curl{\vb*{B}} = \frac{4\pi}{c} \vb*{J} + \frac{1}{c} \pdv{\vb*{E}}{t}.
 \end{equation}
+
+现在考虑一般的场的分析力学, 将场$ \phi(\vb*{x},t) $记作$ \phi(x) $. 由于场依赖于连续时空, 我们需要引入\textbf{拉格朗日密度}$ \lagrden(\phi(x),\partial_{\mu}\phi(x)) $, 此时场的作用量是
+\begin{equation*}
+    \action = \int_{t_{\init}}^{t_{\fini}} \lagr \dd{t} = \int_{t_{\init}}^{t_{\fini}} \dd{t} \int_{\init}^{\fini} \lagrden \dd[3]{x} = \frac{1}{c} \int_{\init}^{\fini} \lagrden \dd[4]{x}.
+\end{equation*}
+其中$ \lagrden $和$ \dd[4]{x} $在洛伦兹变换下保持不变. 我们可采用变分法获得场的力学量和运动方程, 具体地
+\begin{align*}
+    \var{\action} &= \frac{1}{c} \int_{\init}^{\fini} \var{\lagrden} \dd[4]{x} = \frac{1}{c} \int_{\init}^{\fini} \bigg( \pdv{\lagrden}{\phi(x)}\var{\phi(x)} + \pdv{\lagrden}{(\partial_{\mu} \phi(x))}\var{(\partial_{\mu} \phi(x))} \bigg) \dd[4]{x} \\
+    &= \frac{1}{c} \int_{\init}^{\fini} \bigg( \pdv{\lagrden}{\phi(x)}\var{\phi(x)} + \pdv{\lagrden}{(\partial_{\mu} \phi(x))} \partial_{\mu}(\var{\phi(x)}) \bigg) \dd[4]{x}\\
+    &= \frac{1}{c} \eval{\pdv{\lagrden}{(\partial_{\mu} \phi(x))} \var{\phi(x)}}_{\init}^{\fini} + \frac{1}{c} \int_{\init}^{\fini} \bigg( \pdv{\lagrden}{\phi(x)} - \partial_{\mu} \pdv{\lagrden}{(\partial_{\mu} \phi(x))} \bigg)\var{\phi(x)} \dd[4]{x}.
+\end{align*}
+由于$ \var{\phi(a)}=\var{\phi(b)}=0 $, 得$ \eval{\pdv{\lagrden}{(\partial_{\mu} \phi(x))} \var{\phi(x)}}_{\init}^{\fini}=0 $. 为了使$ \action $取极小值, $ \var{\action}=0 $. 由于$ \var{\phi(x)} $的任意性, 得场的\textbf{欧拉}--\textbf{拉格朗日方程}
+\begin{equation}
+    \pdv{\lagrden}{\phi(x)} - \partial_{\mu}\pdv{\lagrden}{(\partial_{\mu} \phi(x))} = 0.
+\end{equation}
+我们可以定义\textbf{正则动量密度}$ \pi(x) = {\partial \lagrden}/{\partial \dot{\phi}} $, \textbf{哈密顿密度}$ \hamiden(\phi(x),\grad{\phi(x)},\pi(x)) = \pi\dot{\phi} - \lagrden $. 通过勒让德变换, 可以得到场的\textbf{哈密顿方程}
+\begin{equation}
+    \dot{\phi}(x) = \pdv{\hamiden}{\pi(x)}, \quad \dot{\pi}(x) = - \pdv{\hamiden}{\phi(x)} + \div {\bigg(\pdv{\hamiden}{(\grad{\phi(x)})}\bigg)}.
+\end{equation}
+考虑函数$ f=f(\phi,\pi,t) $, 由于$ \grad{\phi} $不显含时, 有$ \dv*{f}{t} = \pdv*{f}{t} + \pdv{f}{\phi}\dot{\phi}+\pdv{f}{\pi}\dot{\pi} = \pdv*{f}{t}+\pb{f}{\hamiden(\phi,\pi)} $. 如果函数$ f $不显含时间, 则有$ \dv*{f}{t} = \pb{f}{\hamiden(\phi,\pi)} $.
+
+\begin{proposition}[局域变分与全变分]\label{pro:局域变分与全变分}
+    函数$ f(x) $在给定无穷小变换$ T $下, 自变量$ x \mapsto x' = x + \var{x} $, 函数$ f \mapsto f' $.
+    \begin{itemize}
+        \item 如果$ \var{f(x)} = f'(x') - f(x) = f'(x+\var{x}) - f(x) $, 则称$ \var{f(x)} $为$ f(x) $的局域变分.
+        \item 如果$ \var_0{f(x)} = f'(x) - f(x) $, 则称$ \var_0{f(x)} $为$ f(x) $的全变分.
+    \end{itemize}
+    局域变分与全变分之间(在忽略函数二阶及以上小量时)的关系为$ \var = \var_0 + \var{x^{\mu}} \partial_{\mu} $. 全变分可以与微分算符对易, 即$ \var_0{(\partial_{\mu} \phi)} = \partial_{\mu} (\var_0 \phi) $. 局域变分不可与微分算符对易, 且$ \var{(\partial_{\mu} \phi)} = \partial_{\mu} (\var \phi) - (\partial_{\nu} \phi)(\partial_{\mu} \var x^{\nu}) $. 更多相关内容参考微分几何和场论相关专著.
+\end{proposition}
+
+在经典场论中, 任意(使作用量不变的)连续对称变换均会导致存在一个守恒流和运动积分. 考虑对称变换$ T $下, 坐标$ x \mapsto x' $, 场$ \phi \mapsto \phi'(x') $, 拉格朗日密度$ \lagrden(\phi(x),\partial_{\mu}\phi(x)) \mapsto \lagrden'(\phi'(x'),\partial_{\mu}\phi'(x')) $, 则
+\begin{align*}
+    \var{\lagrden} &= \lagrden'-\lagrden = \var_0{\lagrden} + \var{x^{\mu}} \partial_{\mu} \lagrden = \pdv{\lagrden}{\phi} \var_0{\phi} + \pdv{\lagrden}{(\partial_{\mu} \phi)} \var_0{(\partial_{\mu}\phi)} + \var{x^{\mu}} \partial_{\mu} \lagrden \\
+    &= \bigg(\pdv{\lagrden}{\phi} - \partial_{\mu}\pdv{\lagrden}{(\partial_{\mu} \phi)}\bigg)\var_0{\phi} + \partial_{\mu} \bigg( \pdv{\lagrden}{(\partial_{\mu} \phi)} \var_0{\phi} \bigg) + \var{x^{\mu}} \partial_{\mu} \lagrden = \partial_{\mu} \bigg( \pdv{\lagrden}{(\partial_{\mu} \phi)} \var_0{\phi} \bigg) + \var{x^{\mu}} \partial_{\mu} \lagrden, \\
+    \var{\action} &= \frac{1}{c} \bigg(\int_{\init}^{\fini} \lagrden' \dd[4]{x'} - \int_{\init}^{\fini} \lagrden \dd[4]{x}\bigg) = \frac{1}{c} \bigg(\int_{\init}^{\fini} (\lagrden + \var{\lagrden}) (1+\partial_{\mu}\var{x^{\mu}}) \dd[4]{x} - \int_{\init}^{\fini} \lagrden \dd[4]{x}\bigg)\\
+    &= \frac{1}{c} \int_{\init}^{\fini} (\var{\lagrden} + (\partial_{\mu} \var{x^{\mu}}) \lagrden) \dd[4]{x} = \frac{1}{c} \int_{\init}^{\fini} \partial_{\mu} \bigg(  \pdv{\lagrden}{(\partial_{\mu} \phi)} \var_0{\phi} + \var{x^{\mu}} \lagrden\bigg)\dd[4]{x}\\
+    &= \frac{1}{c} \int_{\init}^{\fini} \partial_{\mu} \bigg( \pdv{\lagrden}{(\partial_{\mu} \phi)} \var \phi + \bigg(\lagrden \delta^{\mu}_{\nu} - \pdv{\lagrden}{(\partial_{\mu}\phi)} \partial_{\nu} \phi \bigg) \var{x^{\nu}} \bigg)\dd[4]{x} = \frac{1}{c} \int_{\init}^{\fini} \partial_{\mu} J^{\mu}_{\mathrm{Noether}} \dd[4]{x}.
+\end{align*}
+其中, $ J^{\mu}_{\mathrm{Noether}} $称为\textbf{诺特流}. 由于变换$ T $是对称变换, 得$ \var{\action} = 0 $, 因此有\textbf{诺特定理}
+\begin{equation}
+    \partial_{\mu} J^{\mu}_{\mathrm{Noether}} = 0.
+\end{equation}
+诺特流$ J^{\mu}_{\mathrm{Noether}} $的表达式中有两项，第一项对应场的变换，第二项对应时空坐标的变换. 诺特流是守恒流, 其对应的运动积分\textbf{诺特荷}为
+\begin{equation}
+    Q_{\mathrm{Noether}} = \int_{V \to \infty} J^0_{\mathrm{Noether}} \dd[3]{x}.
+\end{equation}
+洛伦兹矢量场的流密度及荷密度的连续性方程是诺特定理的特殊情况. 注意, 诺特定理仅在经典水平上是成立的, 而经典的对称性在量子化后很可能被破坏(如对称性自发破缺或存在量子反常), 因此力学系统在量子化后经典的对称性是否仍然成立是需要进一步考察的.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section[量子力学]{量子力学}\label{量子力学}
